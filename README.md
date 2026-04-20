@@ -2,12 +2,9 @@
 
 семантический поиск по квеcтам игры Arcanum: Of Steamworks and Magick Obscura
 
-## полный пайплайн
-
-...
 датасет: https://huggingface.co/datasets/pameydorke/arcanum-quests-queries-synthetic
+
 модель: https://huggingface.co/pameydorke/arcanum-quests-retriever-with-hard-negatives
-...
 
 ## задачи
 
@@ -16,7 +13,7 @@
 - [ ] ~~скрапинг arcanum.fandom.com~~: бек отвечал 403; нужно было или более тщательно имитировать реальный запрос, или скрапить по апи; выбрал последнее
 - [x] скрапинг arcanum.fandom.com/api.php
 
-# синтез данных
+# #синтез данных
 
 - [x] синтеза поисковых запросов с помощью 7b qwen
   - [x] (баг) qwen продолжает генерировать после нужного джейсона: stop_strings
@@ -25,7 +22,7 @@
   - [x] (баг) qwen генерирует запросы, основываясь на несущественной информации и заголовка секции(Notes, Walkthrough, Parn 1): убрал заголовок из промпта
   - [x] (баг) qwen включает в запросы слово Arcanum, что излишне: добавил требование в промпт
 
-# обучение ретривера
+## обучение ретривера
 
 - [x] обучить модель на основе BAAI/bge-m3 с помощью GISTEmbedLoss, MultipleNegativesRankingLoss; взять лучший лосс
 
