@@ -6,6 +6,10 @@
 
 модель: https://huggingface.co/pameydorke/arcanum-quests-retriever-with-hard-negatives
 
+## основная метрика
+
+recall@k: лучше показать пользователю релевантный документ в результате поиска не на первом месте, чем не показать вообще
+
 ## задачи
 
 #### скрапинг
@@ -24,36 +28,42 @@
 
 #### обучение ретривера
 
-- [x] обучить модель на основе BAAI/bge-m3 с помощью GISTEmbedLoss, MultipleNegativesRankingLoss; взять лучший лосс
-
-TODO:
-
-- context windows: If sections are sequential (Part 1 → Part 2), prepend summary of previous 1-2 sections or quest title to each row before encoding
-- Avoid negatives from the same quest but different sections (these are often too easy or accidentally false negatives)
-- Manually label 100-200 real player queries (or use GPT-4 to simulate "confused player" queries) rather than relying solely on synthetic query distribution
-
-GISTEmbedLoss => MultipleNegativesRankingLoss: no OOM, but trained model has "test Cosine Recall@5" of 0.84, which is less then model_v1 "test Cosine Recall@5" of 0.87
-
-TODO:
-
-- kimi suggestions => story
-  trained model as guide model
-  batch size, grad accum: 2, 2 => 8, 2
-  tempreture higher for hard negatives: 0.05 or 0.1
-  MultipleNegativesRankingLoss: better for hard negatives?
-  lr a but smaller: 2e-5
-  better config: mine_hard_negatives(
-  dataset=train_dataset,
-  model=model,
-  range_min=10,
-  range_max=100,
-  max_score=0.9,
-  num_negatives=1,
-  batch_size=16,
-  use_faiss=True,
-  )
-
-ds issue: sections do not know about main purpose: https://arcanum.fandom.com/wiki/Find_the_Bow_of_Ecclesiastes is about becoming a bow master
-TODO: prepend section with basic quest info like: "Bow mastery quest..."
-
-https://arcanum.fandom.com/wiki/Find_Dudley_Crosston hard negative: two metions of bow master, but it's not bow master quest
+- [x] обучить модель на основе BAAI/bge-m3
+- [x] сравнить MultipleNegativesRankingLoss и GISTEmbedLoss
+  - [x] MultipleNegativesRankingLoss
+  - [x] GISTEmbedLoss с температурой 0.01 и BAAI/bge-m3 в качестве guide model
+  - результат: GISTEmbedLoss даёт более высокий recall@k
+- [x] получить hard negatives с помощью обученной модели
+- [x] дообучить модель на hard negatives
+  - [x] сравнить MultipleNegativesRankingLoss и GISTEmbedLoss
+    - [x] MultipleNegativesRankingLoss
+    - [x] GISTEmbedLoss с температурой: 0.01, 0.05, 0.1
+    - результат: обе функции потерь показывают тот же recall@k, но лучше MultipleNegativesRankingLoss по времени и памяти, так как не требует использования guide model
+  - [x] получение hard negatives
+    - range
+      - [x] range_max 50
+      - [x] range_max 100
+      - [x] range_max 200
+      - результат:
+    - margin
+      - [x] 0.1
+      - [x] 0.0
+      - [x] default(check)
+      - результат:
+    - margin
+      - [x] 0.1
+      - [x] 0.0
+      - [x] default(check)
+      - результат:
+    - max_score
+      - [x] 0.8
+      - [x] 0.9
+      - результат:
+    - num_negatives
+      - [x] 1
+      - [x] 3
+      - [x] 5
+      - результат:
+- [ ] (баг) секции не содержат информации и квесте; например, что это основной квест и квемт на мастерство
+  - [ ] добавить инфорамцию о квест в начало каждой секции
+- [ ] проверить на реальных данных(написать запросы самому)
