@@ -2,9 +2,9 @@
 
 semantic search of quests of Arcanum: Of Steamworks and Magick Obscura
 
-dataset: https://huggingface.co/datasets/pameydorke/arcanum-quests-queries-synthetic
+[dataset](https://huggingface.co/datasets/pameydorke/arcanum-quests-queries-synthetic-v2)
 
-model: https://huggingface.co/pameydorke/arcanum-quests-retriever-with-hard-negatives
+[model](https://huggingface.co/pameydorke/arcanum-quests-retriever-v2)
 
 ## tasks
 
@@ -23,60 +23,28 @@ model: https://huggingface.co/pameydorke/arcanum-quests-retriever-with-hard-nega
 
 #### retriever training
 
-- [x] обучить модель на основе BAAI/bge-m3
-- [x] сравнить MultipleNegativesRankingLoss и GISTEmbedLoss
+- [x] train a model based on BAAI/bge-m3 using MultipleNegativesRankingLoss
+- [x] compare MultipleNegativesRankingLoss и GISTEmbedLoss
   - [x] MultipleNegativesRankingLoss
-  - [x] GISTEmbedLoss с температурой 0.01 и BAAI/bge-m3 в качестве guide model
-  - результат: GISTEmbedLoss даёт более высокий recall@k
+  - [x] GISTEmbedLoss with temperature 0.01 and BAAI/bge-m3 as guide model
+  - result: GISTEmbedLoss gives best recall@k, but slower and more memory consuming
 - [x] получить hard negatives с помощью обученной модели
-- [x] дообучить модель на hard negatives
-  - [x] сравнить MultipleNegativesRankingLoss и GISTEmbedLoss
-    - [x] MultipleNegativesRankingLoss
-    - [x] GISTEmbedLoss с температурой: 0.01, 0.05, 0.1
-    - результат: обе функции потерь показывают тот же recall@k, но лучше MultipleNegativesRankingLoss по времени и памяти, так как не требует использования guide model
-  - [ ] получение hard negatives
-    - range
-      - [ ] range_max 50
-      - [ ] range_max 100
-      - [ ] range_max 200
-      - результат:
-    - margin
-      - [ ] 0.1
-      - [ ] 0.0
-      - [ ] default(check)
-      - результат:
-    - margin
-      - [ ] 0.1
-      - [ ] 0.0
-      - [ ] default(check)
-      - результат:
-    - max_score
-      - [ ] 0.8
-      - [ ] 0.9
-      - результат:
-    - num_negatives
-      - [ ] 1
-      - [ ] 3
-      - [ ] 5
-      - результат:
-- [x] (bug) секции не содержат информации о квесте; например, что это основной квест или квест на мастерство
+- [x] train a model on hard negatives
+  - [x] get hard negatives: for each query only one hard negative and only one epoch, bacause model seems to suffer from catastrophic forgetting(loss on hard negatives improves, but all metrics decrease)
+- [x] (bug) quest text do not include important meta information(e.g. that it is a skill quest aor main quest)
   - [x] prepend section with quest info
-- [ ] write 200 queries yourself, eval
 - [x] (bug) 'arcanum', 'steamwords', 'arkanum', 'num' in queries
   - regexp did not work: too many variations
   - [x] remove prompt line '...You are a player of the RPG game "Arcanum'
-- [x] (bug) vague queries are too vague
-  - prompt engineering did not work
-  - [x] switched to 14 b qwen: base model recall@5 0.9 => 0.96
-  - [ ] why hard negatives do not improve recall@5?
+- [x] (bug) vague queries are too vague: hard to find relevant document even for me
+  - [x] prompt engineering did not work
+  - [x] switched to 14 b qwen: recall@5 0.9 => 0.96; no too vague queries
 
-- [x] (bug) duplicates of documents during inference: removed duplicates
+#### inference
 
-- [ ] read hard few hard negatives: do they make sence?
-- [ ] base model: why locc improves, recall not?
+- [x] (bug) duplicates of documents: removed duplicates
+- [ ] (bug): 228 enhanced_documents, not 229
 
-- [ ] train base model 3 more epochs
+#### evaluation
 
-- [ ] lora?
-
-- [ ] retrieval + bm25
+- [ ] write 200 queries yourself, eval(one query that wiki website handles, one that not)
