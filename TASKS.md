@@ -43,22 +43,39 @@
 
 in it's current state model app does nothing that arcanum.fandom.com search can't do; apparently their fandom search is good enough to handle typos and vague requests
 
-if I can't do simple search better then fandom then I should offer something more: cross-community search that includes stadart search for quests, stats, items, characters and also includes patches, modes, bugs from reddit, terra-arcanum.com, arcanumclub.org, https://rpgcodex.net/forums/?__cf_chl_rt_tk=QlL3sVaG9BukgoFl8BcOJnYtHDTejPkeyG25S5mBQ80-1781250793-1.0.1.1-42iPJ8UeeX4wg5Hqx.3qCwNiT9Xek4ROgANXC3LjmHc, https://gamefaqs.gamespot.com/pc/914155-arcanum-of-steamworks-and-magick-obscura/faqs/63974?print=1, https://www.pcgamingwiki.com/wiki/Arcanum:_Of_Steamworks_&_Magick_Obscura
+if I can't do simple search better then fandom then I should offer something more: cross-community search that includes stadart search for quests, stats, items, characters and also includes patches, modes, bugs from reddit, terra-arcanum.com, arcanumclub.org, https://rpgcodex.net/forums/?__cf_chl_rt_tk=QlL3sVaG9BukgoFl8BcOJnYtHDTejPkeyG25S5mBQ80-1781250793-1.0.1.1-42iPJ8UeeX4wg5Hqx.3qCwNiT9Xek4ROgANXC3LjmHc, https://gamefaqs.gamespot.com/pc/914155-arcanum-of-steamworks-and-magick-obscura/faqs/63974?print=1, https://www.pcgamingwiki.com/wiki/Arcanum:_Of_Steamworks_&_Magick_Obscura, https://www.nexusmods.com/arcanumofsteamworksandmagickobscura/mods/4
 
-#### scrap cross-community
+#### scraping cross-community
 
 - [ ] reddit
-  - [ ] add parameters to yandex cloud function
-  - [ ] r/arcanum with query 'bug'
-  - [ ] r/arcanum with query 'patch'
-  - [ ] r/arcanum with query 'mode'
+  - [ ] add srach parameter to yandex cloud function
+  - [ ] r/arcanum with query 'bug' and should include word 'bug'
+  - [ ] r/arcanum with query 'patch' and should include word 'patch' | 'UAP'
+  - [ ] r/arcanum with query 'mode' and should include word 'mode'
+  - [ ] remove duplicates
+  - [ ] filter by upvotes
+  - [ ] pinned
+  - [ ] manully saved to bookmarks
+  - [ ] filter by u/SCARaw
 - [ ] terra-arcanum
   - [ ] define usefull docs; at least off and unoff patches; maybe top/recent bugs, trics?
+  - [ ] official patch
+  - [ ] unofficial patch
+  - [ ] level Cap Remover
+  - [ ] high resolution patch
+  - [ ] http://terra-arcanum.com/phpBB/viewtopic.php?t=16864
 - [ ] arcanumclub.org
   - [ ] ru patch
 - [ ] rpgcodex.net
+  - [ ] http://www.rpgcodex.net/forums/index.php?threads/guide-to-arcanum-schematics-
+        complete.54412/
 - [ ] gamefaqs.gamespot.com
+  - [ ] extensive weapon database
+  - [ ]
 - [ ] pcgamingwiki.com
+- [ ] all arcanum.fandom.com, not just quests
+- [ ] nexusmods.com
+  - [ ] https://www.nexusmods.com/arcanumofsteamworksandmagickobscura/mods/4
 
 #### synthetic data cross-community
 
@@ -67,3 +84,4 @@ if I can't do simple search better then fandom then I should offer something mor
 #### ui
 
 - [ ] add highlight to fandom wiki link 'https://en.wikipedia.org/wiki/Cat#:~:text=native%20felines'
+- [ ] if doc is from fandom, show info that it's official patch
