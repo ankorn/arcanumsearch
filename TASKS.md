@@ -49,10 +49,12 @@ if I can't do simple search better then fandom then I should offer something mor
 
 - [ ] reddit
   - [x] add srach parameter to yandex cloud function
+    - [x] https://functions.yandexcloud.net/d4e4d9s8rbi7flr2iei5?subreddit=arcanum&query=bug
   - [ ] r/arcanum with query 'bug' and should include word 'bug'
   - [ ] r/arcanum with query 'patch' and should include word 'patch' | 'UAP'
   - [ ] r/arcanum with query 'mode' and should include word 'mode'
     - [x] skipped: 'mode' is often used in different context like 'easy mode', 'turne-based mode'
+  - [ ] fix 429 in reddit data
   - [ ] remove duplicates
   - [ ] filter by upvotes
   - [ ] pinned
