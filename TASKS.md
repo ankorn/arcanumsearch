@@ -48,7 +48,7 @@ if I can't do simple search better then fandom then I should offer something mor
 #### scraping cross-community
 
 - [ ] reddit
-  - [ ] add srach parameter to yandex cloud function
+  - [x] add srach parameter to yandex cloud function
   - [ ] r/arcanum with query 'bug' and should include word 'bug'
   - [ ] r/arcanum with query 'patch' and should include word 'patch' | 'UAP'
   - [ ] r/arcanum with query 'mode' and should include word 'mode'
