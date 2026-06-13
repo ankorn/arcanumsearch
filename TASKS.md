@@ -52,6 +52,7 @@ if I can't do simple search better then fandom then I should offer something mor
   - [ ] r/arcanum with query 'bug' and should include word 'bug'
   - [ ] r/arcanum with query 'patch' and should include word 'patch' | 'UAP'
   - [ ] r/arcanum with query 'mode' and should include word 'mode'
+    - [x] skipped: 'mode' is often used in different context like 'easy mode', 'turne-based mode'
   - [ ] remove duplicates
   - [ ] filter by upvotes
   - [ ] pinned
