@@ -55,6 +55,7 @@ if I can't do simple search better then fandom then I should offer something mor
   - [ ] r/arcanum with query 'mode' and should include word 'mode'
     - [x] skipped: 'mode' is often used in different context like 'easy mode', 'turne-based mode'
   - [ ] fix 429 in reddit data
+  - [ ] handle kind == 'more' and other useless
   - [ ] scrap one page per request to git yandex cloud limits
   - [ ] remove duplicates
   - [ ] filter by upvotes
