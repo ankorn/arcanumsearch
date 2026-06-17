@@ -1,3 +1,5 @@
+## fandom wiki
+
 #### scraping
 
 - [x] scraping arcanum.fandom.com/api.php
@@ -45,9 +47,11 @@ in it's current state model app does nothing that arcanum.fandom.com search can'
 
 if I can't do simple search better then fandom then I should offer something more: cross-community search that includes stadart search for quests, stats, items, characters and also includes patches, modes, bugs from reddit, terra-arcanum.com, arcanumclub.org, https://rpgcodex.net/forums/?__cf_chl_rt_tk=QlL3sVaG9BukgoFl8BcOJnYtHDTejPkeyG25S5mBQ80-1781250793-1.0.1.1-42iPJ8UeeX4wg5Hqx.3qCwNiT9Xek4ROgANXC3LjmHc, https://gamefaqs.gamespot.com/pc/914155-arcanum-of-steamworks-and-magick-obscura/faqs/63974?print=1, https://www.pcgamingwiki.com/wiki/Arcanum:_Of_Steamworks_&_Magick_Obscura, https://www.nexusmods.com/arcanumofsteamworksandmagickobscura/mods/4
 
-#### scraping cross-community
+## cross-community
 
-- [ ] reddit
+#### scraping
+
+- [x] reddit
   - [x] add srach parameter to yandex cloud function
     - [x] https://functions.yandexcloud.net/d4e4d9s8rbi7flr2iei5?subreddit=arcanum&query=bug
   - [x] r/arcanum with query 'bug' and should include word 'bug'
@@ -61,7 +65,7 @@ if I can't do simple search better then fandom then I should offer something mor
   - [x] manually saved to bookmarks
   - [x] filter by u/SCARaw? no need - post by user are already in scraped data
 - [ ] terra-arcanum
-  - [ ] define usefull docs; at least off and unoff patches; maybe top/recent bugs, trics?
+  - [ ] define usefull docs; at least off and unoff patches; maybe top/recent bugs, tricks?
   - [ ] official patch
   - [ ] unofficial patch
   - [ ] level Cap Remover
@@ -74,16 +78,18 @@ if I can't do simple search better then fandom then I should offer something mor
         complete.54412/
 - [ ] gamefaqs.gamespot.com
   - [ ] extensive weapon database
-  - [ ]
 - [ ] pcgamingwiki.com
 - [ ] all arcanum.fandom.com, not just quests
 - [ ] nexusmods.com
   - [ ] https://www.nexusmods.com/arcanumofsteamworksandmagickobscura/mods/4
+
+#### preprocessing
+
 - [ ] check length; some texts too big: https://www.reddit.com/r/arcanum/comments/z3x6h8/arcanum_patches_mods_compilation_what_to_download/
 - [ ] remove duplicates
 - [ ] handle reddit kind == 'more' and other useless
 
-#### synthetic data cross-community
+#### synthetic data
 
 - [ ] use modern gemma4 instead of qwen
 
