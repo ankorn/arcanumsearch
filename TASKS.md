@@ -54,14 +54,12 @@ if I can't do simple search better then fandom then I should offer something mor
   - [x] r/arcanum with query 'patch' and should include word 'patch' | 'UAP'
   - [x] r/arcanum with query 'mode' and should include word 'mode'
     - [x] skipped: 'mode' is often used in different context like 'easy mode', 'turne-based mode'
-  - [ ] fix 429 in reddit data
-  - [ ] handle kind == 'more' and other useless
-  - [ ] scrap one page per request to git yandex cloud limits
-  - [ ] remove duplicates
-  - [ ] filter by upvotes
-  - [ ] pinned
-  - [ ] manually saved to bookmarks
-  - [ ] filter by u/SCARaw
+  - [x] fix 429 in reddit data
+  - [x] scrap one page per request to git yandex cloud limits
+  - [x] filter by upvotes? not need, default sorting by best if fine
+  - [x] pinned
+  - [x] manually saved to bookmarks
+  - [x] filter by u/SCARaw? no need - post by user are already in scraped data
 - [ ] terra-arcanum
   - [ ] define usefull docs; at least off and unoff patches; maybe top/recent bugs, trics?
   - [ ] official patch
@@ -81,6 +79,9 @@ if I can't do simple search better then fandom then I should offer something mor
 - [ ] all arcanum.fandom.com, not just quests
 - [ ] nexusmods.com
   - [ ] https://www.nexusmods.com/arcanumofsteamworksandmagickobscura/mods/4
+- [ ] check length; some texts too big: https://www.reddit.com/r/arcanum/comments/z3x6h8/arcanum_patches_mods_compilation_what_to_download/
+- [ ] remove duplicates
+- [ ] handle reddit kind == 'more' and other useless
 
 #### synthetic data cross-community
 
