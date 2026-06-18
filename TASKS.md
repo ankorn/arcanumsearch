@@ -80,8 +80,8 @@ if I can't do simple search better then fandom then I should offer something mor
   - [ ] extensive weapon database
 - [ ] pcgamingwiki.com
 - [ ] all arcanum.fandom.com, not just quests
-- [ ] nexusmods.com
-  - [ ] https://www.nexusmods.com/arcanumofsteamworksandmagickobscura/mods/4
+- [x] nexusmods.com
+  - [x] https://www.nexusmods.com/arcanumofsteamworksandmagickobscura/mods/4
 
 #### preprocessing
 
