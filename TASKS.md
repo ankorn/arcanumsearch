@@ -81,13 +81,11 @@ if I can't do simple search better then fandom then I should offer something mor
 - [ ] pcgamingwiki.com
 - [x] nexusmods.com
   - [x] https://www.nexusmods.com/arcanumofsteamworksandmagickobscura/mods/4 and other popular mods
+- [x] ~~use fandom.wiki search instead of training a model on their documents?~~: only 1 request per minute
 - [ ] all arcanum.fandom.com, not just quests
   - [ ] if text small make it one document, else split by sections: https://arcanum.fandom.com/wiki/Quest_NPCs
-  - [ ] skip some: https://arcanum.fandom.com/wiki/Quests_Sandbox, https://arcanum.fandom.com/wiki/Quests_Template
-  - [ ] use fandom.wiki.search instead
-    - https://arcanum.fandom.com/api.php?action=query&list=search&srsearch=dog&format=json
-    - https://arcanum.fandom.com/api.php?action=query&meta=userinfo&uiprop=ratelimits
-    - [ ] Retry-After headers
+  - [ ] skip meta: https://arcanum.fandom.com/wiki/Quests_Sandbox, https://arcanum.fandom.com/wiki/Quests_Template
+  - [ ] skip aggreator pages like https://arcanum.fandom.com/wiki/Locations
 
 #### preprocessing
 
