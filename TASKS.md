@@ -81,7 +81,7 @@ if I can't do simple search better then fandom then I should offer something mor
 - [ ] pcgamingwiki.com
 - [ ] all arcanum.fandom.com, not just quests
 - [x] nexusmods.com
-  - [x] https://www.nexusmods.com/arcanumofsteamworksandmagickobscura/mods/4
+  - [x] https://www.nexusmods.com/arcanumofsteamworksandmagickobscura/mods/4 and other popular mods
 
 #### preprocessing
 
@@ -92,6 +92,10 @@ if I can't do simple search better then fandom then I should offer something mor
 #### synthetic data
 
 - [ ] use modern gemma4 instead of qwen
+
+#### eval
+
+- [ ] AUP is mentioned everywhere; will simple request 'UAP' will show original terra-arcanum page?
 
 #### ui
 
