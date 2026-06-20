@@ -79,9 +79,15 @@ if I can't do simple search better then fandom then I should offer something mor
 - [ ] gamefaqs.gamespot.com
   - [ ] extensive weapon database
 - [ ] pcgamingwiki.com
-- [ ] all arcanum.fandom.com, not just quests
 - [x] nexusmods.com
   - [x] https://www.nexusmods.com/arcanumofsteamworksandmagickobscura/mods/4 and other popular mods
+- [ ] all arcanum.fandom.com, not just quests
+  - [ ] if text small make it one document, else split by sections: https://arcanum.fandom.com/wiki/Quest_NPCs
+  - [ ] skip some: https://arcanum.fandom.com/wiki/Quests_Sandbox, https://arcanum.fandom.com/wiki/Quests_Template
+  - [ ] use fandom.wiki.search instead
+    - https://arcanum.fandom.com/api.php?action=query&list=search&srsearch=dog&format=json
+    - https://arcanum.fandom.com/api.php?action=query&meta=userinfo&uiprop=ratelimits
+    - [ ] Retry-After headers
 
 #### preprocessing
 
