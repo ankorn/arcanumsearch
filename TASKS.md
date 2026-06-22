@@ -84,8 +84,19 @@ if I can't do simple search better then fandom then I should offer something mor
 - [x] ~~use fandom.wiki search instead of training a model on their documents?~~: only 1 request per minute
 - [ ] all arcanum.fandom.com, not just quests
   - [ ] if text small make it one document, else split by sections: https://arcanum.fandom.com/wiki/Quest_NPCs
+    - [ ] if split prepend with some kind of summary or at least quest name
+    - [ ] maybe splits are not that important? inefficiant training in batches but whole text for understanding
+      - [ ] try scrap without splits, check length and figure how unefficient it will be; maybe it makes sence to split only few biggest documents like main quest
   - [ ] skip meta: https://arcanum.fandom.com/wiki/Quests_Sandbox, https://arcanum.fandom.com/wiki/Quests_Template
   - [ ] skip aggreator pages like https://arcanum.fandom.com/wiki/Locations
+    - [ ] can't just if title in categories; probably just skip certain pages like locations, followers, etc
+  - [ ] skip redirects
+  - [ ] skip stubs "This article is a stub. You can help Arcanum: Of Steamworks and Magick Obscura Wiki by expanding it"
+  - [ ] skip "in Game Files"
+  - [ ] (?) skip notes; people rarely search tiny details
+  - [ ] do what enhance notebook does; add to REMOVE_SUBSTRINGS, TITLE_MAP
+  - [ ] handle items: https://arcanum.fandom.com/wiki/Axes
+    - [ ] url with #: https://arcanum.fandom.com/wiki/Axes#Arcane_Axe
 
 #### preprocessing
 
