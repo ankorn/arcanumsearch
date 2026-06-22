@@ -97,6 +97,7 @@ if I can't do simple search better then fandom then I should offer something mor
   - [ ] do what enhance notebook does; add to REMOVE_SUBSTRINGS, TITLE_MAP
   - [ ] handle items: https://arcanum.fandom.com/wiki/Axes
     - [ ] url with #: https://arcanum.fandom.com/wiki/Axes#Arcane_Axe
+  - [ ] Path 3, Dodge and Melee Mastery Together -> Path of Dodge and Melee Mastery Together; otherwise synthetic queries will include Path 3
 
 #### preprocessing
 
