@@ -98,6 +98,8 @@ if I can't do simple search better then fandom then I should offer something mor
   - [ ] handle items: https://arcanum.fandom.com/wiki/Axes
     - [ ] url with #: https://arcanum.fandom.com/wiki/Axes#Arcane_Axe
   - [ ] Path 3, Dodge and Melee Mastery Together -> Path of Dodge and Melee Mastery Together; otherwise synthetic queries will include Path 3
+  - [ ] dot lost after title in TEXT
+  - [ ] scrap tables: https://arcanum.fandom.com/wiki/Ancient_Gods
 
 #### preprocessing
 
@@ -117,3 +119,12 @@ if I can't do simple search better then fandom then I should offer something mor
 
 - [ ] add highlight to fandom wiki link 'https://en.wikipedia.org/wiki/Cat#:~:text=native%20felines'
 - [ ] if doc is from fandom, show info that it's official patch
+
+urls to split:
+
+- https://arcanum.fandom.com/wiki/The_Main_Quest
+
+urls to skip:
+
+- https://arcanum.fandom.com/wiki/Locations
+- https://arcanum.fandom.com/wiki/Characters
