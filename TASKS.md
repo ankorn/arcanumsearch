@@ -128,3 +128,8 @@ urls to skip:
 
 - https://arcanum.fandom.com/wiki/Locations
 - https://arcanum.fandom.com/wiki/Characters
+- https://arcanum.fandom.com/wiki/Arcanum:_Of_Steamworks_and_Magick_Obscura_Wiki
+
+#### deploy
+
+- [ ] store document embs: https://supabase.com/dashboard/project/mfphsrdubggjqxvyuzil
