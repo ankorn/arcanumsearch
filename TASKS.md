@@ -91,7 +91,7 @@ if I can't do simple search better then fandom then I should offer something mor
   - [ ] skip "in Game Files"
   - [ ] skip notes; people rarely search tiny details
   - [ ] do what enhance notebook does; add to REMOVE_SUBSTRINGS, TITLE_MAP
-  - [ ] handle items: https://arcanum.fandom.com/wiki/Axes
+  - [x] handle items: https://arcanum.fandom.com/wiki/Axes
     - [ ] (?) url with #: https://arcanum.fandom.com/wiki/Axes#Arcane_Axe
   - [ ] 'Path 3, Dodge and Melee Mastery Together' -> 'Path of Dodge and Melee Mastery Together'; otherwise synthetic queries will include Path 3
   - [ ] dot lost after title in TEXT
@@ -119,8 +119,9 @@ if I can't do simple search better then fandom then I should offer something mor
 urls to split:
 
 - https://arcanum.fandom.com/wiki/The_Main_Quest
+- https://arcanum.fandom.com/wiki/Ancient_Gods
 
-urls to skip:
+urls to skip(aggregator pages):
 
 - https://arcanum.fandom.com/wiki/Locations
 - https://arcanum.fandom.com/wiki/Characters
