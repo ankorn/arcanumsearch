@@ -88,6 +88,7 @@ if I can't do simple search better then fandom then I should offer something mor
   - [ ] skip meta: https://arcanum.fandom.com/wiki/Quests_Sandbox, https://arcanum.fandom.com/wiki/Quests_Template
   - [ ] skip redirects
   - [ ] skip stubs "This article is a stub. You can help Arcanum: Of Steamworks and Magick Obscura Wiki by expanding it"
+    - [ ] fix short_description is just full text for https://arcanum.fandom.com/wiki/Axes
   - [ ] skip "in Game Files"
   - [ ] skip notes; people rarely search tiny details
   - [ ] do what enhance notebook does; add to REMOVE_SUBSTRINGS, TITLE_MAP
