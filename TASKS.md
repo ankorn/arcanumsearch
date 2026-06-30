@@ -93,9 +93,8 @@ if I can't do simple search better then fandom then I should offer something mor
   - [ ] skip notes; people rarely search tiny details
   - [ ] do what enhance notebook does; add to REMOVE_SUBSTRINGS, TITLE_MAP
   - [x] handle items: https://arcanum.fandom.com/wiki/Axes
-    - [ ] (?) url with #: https://arcanum.fandom.com/wiki/Axes#Arcane_Axe
   - [ ] 'Path 3, Dodge and Melee Mastery Together' -> 'Path of Dodge and Melee Mastery Together'; otherwise synthetic queries will include Path 3
-  - [ ] dot lost after title in TEXT
+  - [x] dot lost after section in full TEXT
   - [ ] scrap tables: https://arcanum.fandom.com/wiki/Ancient_Gods
 
 #### preprocessing
