@@ -83,15 +83,15 @@ if I can't do simple search better then fandom then I should offer something mor
   - [x] https://www.nexusmods.com/arcanumofsteamworksandmagickobscura/mods/4 and other popular mods
 - [x] ~~use fandom.wiki search instead of training a model on their documents?~~: only 1 request per minute
 - [ ] all arcanum.fandom.com, not just quests
-  - [ ] if text small make it one document, else split by sections: https://arcanum.fandom.com/wiki/Quest_NPCs
-    - [ ] if split prepend with quest name
-  - [ ] skip meta: https://arcanum.fandom.com/wiki/Quests_Sandbox, https://arcanum.fandom.com/wiki/Quests_Template
+  - [x] if text small make it one document, else split by sections: https://arcanum.fandom.com/wiki/Quest_NPCs
+    - [x] if split prepend with quest name
+  - [x] add skip aggregator pages logic: https://arcanum.fandom.com/wiki/Quests_Sandbox, https://arcanum.fandom.com/wiki/Quests_Template
+  - [ ] define full list of aggregator pages
   - [ ] skip redirects
   - [x] skip stubs "This article is a stub. You can help Arcanum: Of Steamworks and Magick Obscura Wiki by expanding it"
     - [x] fix short_description is just full text for https://arcanum.fandom.com/wiki/Axes
-  - [ ] skip "in Game Files"
-  - [ ] skip notes; people rarely search tiny details
-  - [ ] do what enhance notebook does; add to REMOVE_SUBSTRINGS, TITLE_MAP
+  - [x] skip "in Game Files"
+  - [ ] run enhance notebook after
   - [x] handle items: https://arcanum.fandom.com/wiki/Axes
   - [ ] 'Path 3, Dodge and Melee Mastery Together' -> 'Path of Dodge and Melee Mastery Together'; otherwise synthetic queries will include Path 3
   - [x] dot lost after section in full TEXT
@@ -106,6 +106,7 @@ if I can't do simple search better then fandom then I should offer something mor
 #### synthetic data
 
 - [ ] use modern gemma4 instead of qwen
+- [ ] stress in prompt that queries should not contain hidden info like exp, notes, part 1, etc
 
 #### eval
 
@@ -115,17 +116,6 @@ if I can't do simple search better then fandom then I should offer something mor
 
 - [ ] add highlight to fandom wiki link 'https://en.wikipedia.org/wiki/Cat#:~:text=native%20felines'
 - [ ] if doc is from fandom, show info that it's official patch
-
-urls to split:
-
-- https://arcanum.fandom.com/wiki/The_Main_Quest
-- https://arcanum.fandom.com/wiki/Ancient_Gods
-
-urls to skip(aggregator pages):
-
-- https://arcanum.fandom.com/wiki/Locations
-- https://arcanum.fandom.com/wiki/Characters
-- https://arcanum.fandom.com/wiki/Arcanum:_Of_Steamworks_and_Magick_Obscura_Wiki
 
 #### deploy
 
