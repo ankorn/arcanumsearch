@@ -93,9 +93,8 @@ if I can't do simple search better then fandom then I should offer something mor
   - [x] skip "in Game Files"
   - [ ] run enhance notebook after
   - [x] handle items: https://arcanum.fandom.com/wiki/Axes
-  - [ ] 'Path 3, Dodge and Melee Mastery Together' -> 'Path of Dodge and Melee Mastery Together'; otherwise synthetic queries will include Path 3
   - [x] dot lost after section in full TEXT
-  - [ ] scrap tables: https://arcanum.fandom.com/wiki/Ancient_Gods
+  - [ ] (low priority) scrap tables: https://arcanum.fandom.com/wiki/Ancient_Gods
 
 #### preprocessing
 
