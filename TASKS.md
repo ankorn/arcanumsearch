@@ -91,6 +91,7 @@ if I can't do simple search better then fandom then I should offer something mor
   - [x] skip stubs "This article is a stub. You can help Arcanum: Of Steamworks and Magick Obscura Wiki by expanding it"
     - [x] fix short_description is just full text for https://arcanum.fandom.com/wiki/Axes
   - [x] skip "in Game Files"
+  - [x] skip Sandboxes
   - [ ] run enhance notebook after
   - [x] handle items: https://arcanum.fandom.com/wiki/Axes
   - [x] dot lost after section in full TEXT
