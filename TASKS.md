@@ -96,6 +96,7 @@ if I can't do simple search better then fandom then I should offer something mor
   - [x] handle items: https://arcanum.fandom.com/wiki/Axes
   - [x] dot lost after section in full TEXT
   - [ ] (low priority) scrap tables: https://arcanum.fandom.com/wiki/Ancient_Gods
+  - [ ] when done check split urls docs lengths
 
 #### preprocessing
 
