@@ -86,8 +86,8 @@ if I can't do simple search better then fandom then I should offer something mor
   - [x] if text small make it one document, else split by sections: https://arcanum.fandom.com/wiki/Quest_NPCs
     - [x] if split prepend with quest name
   - [x] add skip aggregator pages logic: https://arcanum.fandom.com/wiki/Quests_Sandbox, https://arcanum.fandom.com/wiki/Quests_Template
-  - [ ] define full list of aggregator pages
-  - [ ] skip redirects
+  - [x] define full list of aggregator pages
+  - [x] skip redirects: no need, wiil be fixed by deduplication
   - [x] skip stubs "This article is a stub. You can help Arcanum: Of Steamworks and Magick Obscura Wiki by expanding it"
     - [x] fix short_description is just full text for https://arcanum.fandom.com/wiki/Axes
   - [x] skip "in Game Files"
