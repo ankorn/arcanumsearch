@@ -82,7 +82,7 @@ if I can't do simple search better then fandom then I should offer something mor
 - [x] nexusmods.com
   - [x] https://www.nexusmods.com/arcanumofsteamworksandmagickobscura/mods/4 and other popular mods
 - [x] ~~use fandom.wiki search instead of training a model on their documents?~~: only 1 request per minute
-- [ ] all arcanum.fandom.com, not just quests
+- [x] all arcanum.fandom.com, not just quests
   - [x] if text small make it one document, else split by sections: https://arcanum.fandom.com/wiki/Quest_NPCs
     - [x] if split prepend with quest name
   - [x] add skip aggregator pages logic: https://arcanum.fandom.com/wiki/Quests_Sandbox, https://arcanum.fandom.com/wiki/Quests_Template
@@ -92,11 +92,10 @@ if I can't do simple search better then fandom then I should offer something mor
     - [x] fix short_description is just full text for https://arcanum.fandom.com/wiki/Axes
   - [x] skip "in Game Files"
   - [x] skip Sandboxes
-  - [ ] run enhance notebook after
+  - [x] run enhance notebook after
   - [x] handle items: https://arcanum.fandom.com/wiki/Axes
   - [x] dot lost after section in full TEXT
   - [ ] (low priority) scrap tables: https://arcanum.fandom.com/wiki/Ancient_Gods
-  - [ ] when done check split urls docs lengths
 
 #### preprocessing
 
