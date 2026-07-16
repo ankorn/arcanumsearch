@@ -100,8 +100,10 @@ if I can't do simple search better then fandom then I should offer something mor
 #### preprocessing
 
 - [ ] check length; handle too big: https://www.reddit.com/r/arcanum/comments/z3x6h8/arcanum_patches_mods_compilation_what_to_download/
-- [ ] remove duplicates
-- [ ] handle reddit kind == 'more' and other useless
+- [x] remove duplicates
+- [ ] reddit
+  - [ ] handle reddit kind == 'more' and other useless
+  - [ ] format text + comments
 
 #### synthetic data
 
