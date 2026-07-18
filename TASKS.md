@@ -99,11 +99,12 @@ if I can't do simple search better then fandom then I should offer something mor
 
 #### preprocessing
 
+- [x] arcanum-wiki
 - [ ] check length; handle too big: https://www.reddit.com/r/arcanum/comments/z3x6h8/arcanum_patches_mods_compilation_what_to_download/
 - [x] remove duplicates
-- [ ] reddit
-  - [ ] handle reddit kind == 'more' and other useless
-  - [ ] format text + comments
+- [x] reddit
+  - [x] handle reddit kind == 'more' and other useless
+  - [x] format text + comments
 
 #### synthetic data
 
