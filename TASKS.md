@@ -111,6 +111,10 @@ if I can't do simple search better then fandom then I should offer something mor
 - [ ] use modern gemma4 instead of qwen
 - [ ] stress in prompt that queries should not contain hidden info like exp, notes, part 1, etc
 
+#### train
+
+- [ ] rerank: NDCG
+
 #### eval
 
 - [ ] AUP is mentioned everywhere; will simple request 'UAP' will show original terra-arcanum page?
