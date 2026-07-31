@@ -117,7 +117,8 @@ if I can't do simple search better then fandom then I should offer something mor
 
 #### eval
 
-- [ ] AUP is mentioned everywhere; will simple request 'UAP' will show original terra-arcanum page?
+- [x] UAP is mentioned everywhere; will simple request 'UAP' will show original page?
+  - no, but a lot of relevant docs from reddit
 
 #### ui
 
@@ -127,3 +128,7 @@ if I can't do simple search better then fandom then I should offer something mor
 #### deploy
 
 - [ ] store document embs: https://supabase.com/dashboard/project/mfphsrdubggjqxvyuzil
+
+#### chat
+
+- RAG
