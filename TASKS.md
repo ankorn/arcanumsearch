@@ -128,6 +128,8 @@ if I can't do simple search better then fandom then I should offer something mor
 #### deploy
 
 - [ ] store document embs: https://supabase.com/dashboard/project/mfphsrdubggjqxvyuzil
+- [ ] cloudflare worker
+- [ ] query emb via hf inference api
 
 #### chat
 
