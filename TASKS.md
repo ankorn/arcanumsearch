@@ -120,15 +120,19 @@ if I can't do simple search better then fandom then I should offer something mor
 - [x] UAP is mentioned everywhere; will simple request 'UAP' will show original page?
   - no, but a lot of relevant docs from reddit
 
-#### ui
+#### frontend
 
+- [ ] connect: https://supabase.com/dashboard/project/mfphsrdubggjqxvyuzil?showConnect=true&framework=react
 - [ ] add highlight to fandom wiki link 'https://en.wikipedia.org/wiki/Cat#:~:text=native%20felines'
 - [ ] if doc is from fandom, show info that it's official patch
 
-#### deploy
+#### backend: postgres database + pgvector; cloudflare worker + hf inference api
 
 - [ ] store document embs: https://supabase.com/dashboard/project/mfphsrdubggjqxvyuzil
+  - [ ] upload manually as csv
+- [ ] edge function
 - [ ] cloudflare worker
+  - [ ] check if needed: maybe hf api from js, then edge function
 - [ ] query emb via hf inference api
 
 #### chat
