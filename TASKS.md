@@ -128,12 +128,12 @@ if I can't do simple search better then fandom then I should offer something mor
 
 #### backend: postgres database + pgvector; cloudflare worker + hf inference api
 
-- [ ] store document embs: https://supabase.com/dashboard/project/mfphsrdubggjqxvyuzil
-  - [ ] upload manually as csv
-- [ ] edge function
-- [ ] cloudflare worker
-  - [ ] check if needed: maybe hf api from js, then edge function
-- [ ] query emb via hf inference api
+- [x] store document embs: https://supabase.com/dashboard/project/mfphsrdubggjqxvyuzil
+  - [x] upload manually as csv
+- [ ] supabase edge function
+- [ ] supabase auth
+- [ ] cloudflare worker or yandex cloud function
+  - [ ] query emb via hf inference api
 
 #### chat
 
