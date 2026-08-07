@@ -126,14 +126,14 @@ if I can't do simple search better then fandom then I should offer something mor
 - [ ] add highlight to fandom wiki link 'https://en.wikipedia.org/wiki/Cat#:~:text=native%20felines'
 - [ ] if doc is from fandom, show info that it's official patch
 
-#### backend: postgres database + pgvector; cloudflare worker + hf inference api
+#### backend: postgres database + pgvector; cloud function + hf inference api
 
 - [x] store document embs: https://supabase.com/dashboard/project/mfphsrdubggjqxvyuzil
   - [x] upload manually as csv
-- [ ] supabase edge function
 - [ ] supabase auth
 - [ ] cloudflare worker or yandex cloud function
   - [ ] query emb via hf inference api
+- [ ] or edge function: https://supabase.com/docs/guides/functions/quickstart
 
 #### chat
 
