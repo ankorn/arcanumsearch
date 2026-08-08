@@ -44,9 +44,9 @@ export default {
     // }
     // const embedding = await hfResponse.json();
 
-    const embeddings = [Array(384).fill(0.5)];
+    const embeddings = [Array(1024).fill(0.5)];
 
-    const { data, error } = await ctx.supabase.rpc("match_documents", {
+    const { data, error } = await ctx.supabase.rpc("knn", {
       query_embedding: embeddings[0],
       match_count: 5,
     });

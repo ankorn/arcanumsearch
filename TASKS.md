@@ -134,7 +134,7 @@ if I can't do simple search better then fandom then I should offer something mor
 - [ ] cloudflare worker or yandex cloud function
   - [ ] query emb via hf inference api
 - [ ] edge function: https://supabase.com/docs/guides/functions/quickstart
- - [ ] cors headers
+- [x] knn postges function
 
 #### chat
 
