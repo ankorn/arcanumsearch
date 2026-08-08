@@ -133,7 +133,8 @@ if I can't do simple search better then fandom then I should offer something mor
 - [ ] supabase auth
 - [ ] cloudflare worker or yandex cloud function
   - [ ] query emb via hf inference api
-- [ ] or edge function: https://supabase.com/docs/guides/functions/quickstart
+- [ ] edge function: https://supabase.com/docs/guides/functions/quickstart
+ - [ ] cors headers
 
 #### chat
 
