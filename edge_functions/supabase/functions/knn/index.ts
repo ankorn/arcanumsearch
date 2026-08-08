@@ -6,8 +6,6 @@
 import "@supabase/functions-js/edge-runtime.d.ts";
 import { withSupabase } from "@supabase/server";
 
-console.log("Hello from Functions!");
-
 // This endpoint uses 'publishable' | 'secret' access, apiKey is required.
 // Use publishable for Client-facing, key-validated endpoints
 // Use secret for Server-to-server, internal calls
@@ -26,11 +24,38 @@ export default {
     }
     */
 
-    const { name } = await req.json();
+    const { query } = await req.json();
 
-    return Response.json({
-      message: `Hello ${name}!`,
+    // let hfResponse: Response;
+    // try {
+    //   hfResponse = await fetch(
+    //     "https://api-inference.huggingface.co/models/sentence-transformers/all-MiniLM-L6-v2",
+    //     {
+    //       method: "POST",
+    //       headers: {
+    //         Authorization: `Bearer ${Deno.env.get("HF_API_TOKEN")}`,
+    //         "Content-Type": "application/json",
+    //       },
+    //       body: JSON.stringify({ inputs: query }),
+    //     },
+    //   );
+    // } catch (e) {
+    //   return Response.json({ error: "hf api failed" }, { status: 500 });
+    // }
+    // const embedding = await hfResponse.json();
+
+    const embeddings = [Array(384).fill(0.5)];
+
+    const { data, error } = await ctx.supabase.rpc("match_documents", {
+      query_embedding: embeddings[0],
+      match_count: 5,
     });
+
+    if (error) {
+      return Response.json({ error: error.message }, { status: 500 });
+    }
+
+    return Response.json({ results: data });
   }),
 };
 
