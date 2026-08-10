@@ -5,6 +5,9 @@
 // Setup type definitions for built-in Supabase Runtime APIs
 import "@supabase/functions-js/edge-runtime.d.ts";
 import { withSupabase } from "@supabase/server";
+import { HfInference } from "@huggingface/inference";
+
+const hf = new HfInference(Deno.env.get("HUGGING_FACE_ACCESS_TOKEN"));
 
 // This endpoint uses 'publishable' | 'secret' access, apiKey is required.
 // Use publishable for Client-facing, key-validated endpoints
@@ -26,36 +29,29 @@ export default {
 
     const { query } = await req.json();
 
-    // let hfResponse: Response;
-    // try {
-    //   hfResponse = await fetch(
-    //     "https://api-inference.huggingface.co/models/sentence-transformers/all-MiniLM-L6-v2",
-    //     {
-    //       method: "POST",
-    //       headers: {
-    //         Authorization: `Bearer ${Deno.env.get("HF_API_TOKEN")}`,
-    //         "Content-Type": "application/json",
-    //       },
-    //       body: JSON.stringify({ inputs: query }),
-    //     },
-    //   );
-    // } catch (e) {
-    //   return Response.json({ error: "hf api failed" }, { status: 500 });
-    // }
-    // const embedding = await hfResponse.json();
+    if (!query)
+      return Response.json(
+        { error: "Please provide a query param!" },
+        { status: 400 },
+      );
+
+    // const embeddings = await hf.featureExtraction({
+    //   inputs: query,
+    //   model: "BAAI/bge-m3", // pameydorke/arcanum-cross-platform-retriever
+    // });
 
     const embeddings = [Array(1024).fill(0.5)];
 
-    const { data, error } = await ctx.supabase.rpc("knn", {
-      query_embedding: embeddings[0],
-      match_count: 5,
+    const { data, error } = await ctx.supabase.rpc("query_embeddings", {
+      embedding: embeddings[0],
+      match_threshold: 0.5,
     });
 
-    if (error) {
-      return Response.json({ error: error.message }, { status: 500 });
-    }
+    // if (error) {
+    //   return Response.json({ error: error.message }, { status: 500 });
+    // }
 
-    return Response.json({ results: data });
+    return Response.json({ results: ":)" });
   }),
 };
 
