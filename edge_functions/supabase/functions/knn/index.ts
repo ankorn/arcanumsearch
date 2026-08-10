@@ -47,11 +47,11 @@ export default {
       match_threshold: 0.5,
     });
 
-    // if (error) {
-    //   return Response.json({ error: error.message }, { status: 500 });
-    // }
+    if (error) {
+      return Response.json({ error: error.message }, { status: 500 });
+    }
 
-    return Response.json({ results: ":)" });
+    return Response.json({ results: data });
   }),
 };
 

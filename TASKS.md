@@ -137,6 +137,8 @@ if I can't do simple search better then fandom then I should offer something mor
  - [x] run locally
  - [ ] [bug] no schema for postgres function
  - [ ] test hfInference with vpn that allows access to huggingface
+ - [ ] deploy and test hfInference in prod
+
 - [x] knn postges function
 
 #### chat
