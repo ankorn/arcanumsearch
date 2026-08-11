@@ -131,12 +131,11 @@ if I can't do simple search better then fandom then I should offer something mor
 - [x] store document embs: https://supabase.com/dashboard/project/mfphsrdubggjqxvyuzil
   - [x] upload manually as csv
 - [ ] supabase auth
-- [ ] cloudflare worker or yandex cloud function
-  - [ ] query emb via hf inference api
 - [ ] edge function: https://supabase.com/docs/guides/functions/quickstart
  - [x] run locally
  - [ ] [bug] no schema for postgres function
  - [ ] test hfInference with vpn that allows access to huggingface
+ - [x] deploy and test connection to bd
  - [ ] deploy and test hfInference in prod
 
 - [x] knn postges function

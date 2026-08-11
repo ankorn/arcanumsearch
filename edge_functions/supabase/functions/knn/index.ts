@@ -40,12 +40,14 @@ export default {
     //   model: "BAAI/bge-m3", // pameydorke/arcanum-cross-platform-retriever
     // });
 
-    const embeddings = [Array(1024).fill(0.5)];
+    // const embeddings = [Array(1024).fill(0.5)];
 
-    const { data, error } = await ctx.supabase.rpc("query_embeddings", {
-      embedding: embeddings[0],
-      match_threshold: 0.5,
-    });
+    // const { data, error } = await ctx.supabase.rpc("query_embeddings", {
+    //   embedding: embeddings[0],
+    //   match_threshold: 0.5,
+    // });
+
+    const { data, error } = await ctx.supabase.from("documents").select();
 
     if (error) {
       return Response.json({ error: error.message }, { status: 500 });
@@ -54,6 +56,34 @@ export default {
     return Response.json({ results: data });
   }),
 };
+
+// TODO: deploy
+// if does not work, probably auth
+
+// const model = new Supabase.ai.Session('gte-small')
+// export default {
+//   fetch: withSupabase({ auth: 'user' }, async (req, ctx) => {
+//     const { search } = await req.json()
+//     if (!search) return Response.json({ error: 'Please provide a search param!' }, { status: 400 })
+//     // Generate embedding for search term.
+//     const embedding = await model.run(search, {
+//       mean_pool: true,
+//       normalize: true,
+//     })
+//     // Query embeddings.
+//     const { data: result, error } = await ctx.supabase
+//       .rpc('query_embeddings', {
+//         embedding,
+//         match_threshold: 0.8,
+//       })
+//       .select('content')
+//       .limit(3)
+//     if (error) {
+//       return Response.json({ error: error.message }, { status: 500 })
+//     }
+//     return Response.json({ search, result })
+//   }),
+// }
 
 /* To invoke locally:
 
