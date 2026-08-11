@@ -40,14 +40,13 @@ export default {
     //   model: "BAAI/bge-m3", // pameydorke/arcanum-cross-platform-retriever
     // });
 
-    // const embeddings = [Array(1024).fill(0.5)];
+    const embeddings = [Array(1024).fill(0.5)];
 
-    // const { data, error } = await ctx.supabase.rpc("query_embeddings", {
-    //   embedding: embeddings[0],
-    //   match_threshold: 0.5,
-    // });
-
-    const { data, error } = await ctx.supabase.from("documents").select();
+    // @ts-expect-error
+    const { data, error } = await ctx.supabase.rpc("knn", {
+      query_embedding: embeddings[0],
+      match_threshold: -100, // TODO: set to 0.7 on real embedding
+    });
 
     if (error) {
       return Response.json({ error: error.message }, { status: 500 });
