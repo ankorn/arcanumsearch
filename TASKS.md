@@ -133,8 +133,8 @@ if I can't do simple search better then fandom then I should offer something mor
 - [ ] supabase auth
 - [ ] edge function: https://supabase.com/docs/guides/functions/quickstart
  - [x] run locally
- - [ ] [bug] no schema for postgres function
- - [ ] test hfInference with vpn that allows access to huggingface
+ - [x] [bug] no schema for postgres function
+ - [x] test hfInference with vpn that allows access to huggingface
  - [x] deploy and test connection to bd
  - [ ] deploy and test hfInference in prod
 

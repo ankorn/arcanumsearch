@@ -5,9 +5,7 @@
 // Setup type definitions for built-in Supabase Runtime APIs
 import "@supabase/functions-js/edge-runtime.d.ts";
 import { withSupabase } from "@supabase/server";
-import { HfInference } from "@huggingface/inference";
-
-const hf = new HfInference(Deno.env.get("HUGGING_FACE_ACCESS_TOKEN"));
+import { InferenceClient } from "@huggingface/inference";
 
 // This endpoint uses 'publishable' | 'secret' access, apiKey is required.
 // Use publishable for Client-facing, key-validated endpoints
@@ -35,54 +33,48 @@ export default {
         { status: 400 },
       );
 
-    // const embeddings = await hf.featureExtraction({
-    //   inputs: query,
-    //   model: "BAAI/bge-m3", // pameydorke/arcanum-cross-platform-retriever
-    // });
+    const client = new InferenceClient(
+      Deno.env.get("HUGGING_FACE_ACCESS_TOKEN"),
+    );
 
-    const embeddings = [Array(1024).fill(0.5)];
+    // try {
+    //   const ssresult = await client.sentenceSimilarity({
+    //     model: "pameydorke/arcanum-cross-platform-retriever",
+    //     inputs: {
+    //       source_sentence: "What is the capital?",
+    //       sentences: ["Paris", "London"],
+    //     },
+    //   });
+    //   return Response.json({ results: ssresult });
+    // } catch (e) {
+    //   return Response.json({ error: e }); // InputError
+    // }
+
+    let embedding: number[] | undefined;
+    try {
+      embedding = (await client.featureExtraction({
+        // model: "BAAI/bge-m3",
+        model: "pameydorke/arcanum-cross-platform-retriever",
+        inputs: query,
+        text: query,
+      })) as number[];
+    } catch (error) {
+      console.error("Failed to get embedding:", error);
+    }
 
     // @ts-expect-error
     const { data, error } = await ctx.supabase.rpc("knn", {
-      query_embedding: embeddings[0],
-      match_threshold: -100, // TODO: set to 0.7 on real embedding
+      query_embedding: embedding,
+      match_threshold: -100,
     });
 
     if (error) {
-      return Response.json({ error: error.message }, { status: 500 });
+      return Response.json({ error: error?.message }, { status: 500 });
     }
 
-    return Response.json({ results: data });
+    return Response.json({ results: data, embeddingLength: embedding?.length });
   }),
 };
-
-// TODO: deploy
-// if does not work, probably auth
-
-// const model = new Supabase.ai.Session('gte-small')
-// export default {
-//   fetch: withSupabase({ auth: 'user' }, async (req, ctx) => {
-//     const { search } = await req.json()
-//     if (!search) return Response.json({ error: 'Please provide a search param!' }, { status: 400 })
-//     // Generate embedding for search term.
-//     const embedding = await model.run(search, {
-//       mean_pool: true,
-//       normalize: true,
-//     })
-//     // Query embeddings.
-//     const { data: result, error } = await ctx.supabase
-//       .rpc('query_embeddings', {
-//         embedding,
-//         match_threshold: 0.8,
-//       })
-//       .select('content')
-//       .limit(3)
-//     if (error) {
-//       return Response.json({ error: error.message }, { status: 500 })
-//     }
-//     return Response.json({ search, result })
-//   }),
-// }
 
 /* To invoke locally:
 
