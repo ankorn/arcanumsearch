@@ -37,24 +37,11 @@ export default {
       Deno.env.get("HUGGING_FACE_ACCESS_TOKEN"),
     );
 
-    // try {
-    //   const ssresult = await client.sentenceSimilarity({
-    //     model: "pameydorke/arcanum-cross-platform-retriever",
-    //     inputs: {
-    //       source_sentence: "What is the capital?",
-    //       sentences: ["Paris", "London"],
-    //     },
-    //   });
-    //   return Response.json({ results: ssresult });
-    // } catch (e) {
-    //   return Response.json({ error: e }); // InputError
-    // }
-
     let embedding: number[] | undefined;
     try {
       embedding = (await client.featureExtraction({
-        // model: "BAAI/bge-m3",
-        model: "pameydorke/arcanum-cross-platform-retriever",
+        model: "BAAI/bge-m3",
+        // model: "pameydorke/arcanum-cross-platform-retriever",
         inputs: query,
         text: query,
       })) as number[];
@@ -69,10 +56,11 @@ export default {
     });
 
     if (error) {
+      console.error("Failed to get relevant documents:", error);
       return Response.json({ error: error?.message }, { status: 500 });
     }
 
-    return Response.json({ results: data, embeddingLength: embedding?.length });
+    return Response.json({ results: data });
   }),
 };
 
