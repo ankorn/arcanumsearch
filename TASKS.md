@@ -122,9 +122,14 @@ if I can't do simple search better then fandom then I should offer something mor
 
 #### frontend
 
-- [ ] connect: https://supabase.com/dashboard/project/mfphsrdubggjqxvyuzil?showConnect=true&framework=react
+- [x] favicon
+- [x] fetch logic
+- [x] ui
 - [ ] add highlight to fandom wiki link 'https://en.wikipedia.org/wiki/Cat#:~:text=native%20felines'
 - [ ] if doc is from fandom, show info that it's official patch
+- [x] fix ccs center main container
+- [ ] fix css footer
+- [ ] check fetch in mutation
 
 #### backend: postgres database + pgvector; cloud function + hf inference api
 
@@ -136,7 +141,7 @@ if I can't do simple search better then fandom then I should offer something mor
  - [x] [bug] no schema for postgres function
  - [x] test hfInference with vpn that allows access to huggingface
  - [x] deploy connection to bd
-- [ ] deploy feature extraction to hf spaces
+- [x] deploy feature extraction to hf spaces
 
 - [x] knn postges function
 
