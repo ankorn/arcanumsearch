@@ -1,5 +1,6 @@
 {
   "imports": {
+    "@gradio/client": "npm:@gradio/client@^2.5.0",
     "@supabase/functions-js": "jsr:@supabase/functions-js@^2",
     "@supabase/server": "npm:@supabase/server@^1",
     "@huggingface/inference": "npm:@huggingface/inference"

@@ -5,25 +5,12 @@
 // Setup type definitions for built-in Supabase Runtime APIs
 import "@supabase/functions-js/edge-runtime.d.ts";
 import { withSupabase } from "@supabase/server";
+import { client } from "@gradio/client";
 
 async function getEmbedding(query: string) {
-  const response = await fetch(
-    "https://pameydorke-arcanumsearch.hf.space/api/predict",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ data: [query] }),
-    },
-  );
-
-  if (!response.ok) {
-    throw new Error(`Failed to get embedding: ${response.status}`);
-  }
-
-  const result = await response.json();
-  return result.data[0] as number[];
+  const app = await client("pameydorke/arcanumsearch");
+  const result = await app.predict("/embed_query", [query]);
+  return result.data as number[];
 }
 
 // This endpoint uses 'publishable' | 'secret' access, apiKey is required.
@@ -52,11 +39,16 @@ export default {
         { status: 400 },
       );
 
-    const embedding = await getEmbedding(query);
+    let embeddings: number[] | undefined;
+    try {
+      embeddings = await getEmbedding(query);
+    } catch (e) {
+      console.error("Failed to get embeddinga:", e);
+    }
 
     // @ts-expect-error
     const { data, error } = await ctx.supabase.rpc("knn", {
-      query_embedding: embedding,
+      query_embedding: embeddings?.[0],
       match_threshold: -100,
     });
 
