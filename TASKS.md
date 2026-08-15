@@ -135,6 +135,8 @@ if I can't do simple search better then fandom then I should offer something mor
 - [x] fix reddit format title
 - [x] deploy to gh pages
 - [x] add 'Retrying' when retrying
+- [ ] online metrics
+  - [ ] clicks
 
 
 #### backend: postgres database + pgvector; cloud function + hf inference api
