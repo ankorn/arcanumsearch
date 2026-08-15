@@ -1,8 +1,3 @@
-// Follow this setup guide to integrate the Deno language server with your editor:
-// https://deno.land/manual/getting_started/setup_your_environment
-// This enables autocomplete, go to definition, etc.
-
-// Setup type definitions for built-in Supabase Runtime APIs
 import "@supabase/functions-js/edge-runtime.d.ts";
 import { withSupabase } from "@supabase/server";
 import { client } from "@gradio/client";
@@ -13,24 +8,8 @@ async function getEmbedding(query: string) {
   return result.data as number[];
 }
 
-// This endpoint uses 'publishable' | 'secret' access, apiKey is required.
-// Use publishable for Client-facing, key-validated endpoints
-// Use secret for Server-to-server, internal calls
 export default {
   fetch: withSupabase({ auth: ["publishable", "secret"] }, async (req, ctx) => {
-    // Called by another service with a secret key
-    // ctx.supabaseAdmin bypasses RLS — use for privileged operations
-    /*
-    if (ctx.authMode === "secret") {
-      const { user_id } = await req.json();
-      const { data } = await ctx.supabaseAdmin.auth.admin.getUserById(user_id);
-
-      return Response.json({
-        email: data?.user?.email,
-      });
-    }
-    */
-
     const { query } = await req.json();
 
     if (!query)
@@ -42,8 +21,14 @@ export default {
     let embeddings: number[] | undefined;
     try {
       embeddings = await getEmbedding(query);
-    } catch (e) {
-      console.error("Failed to get embeddinga:", e);
+    } catch (error) {
+      console.error("Failed to get embeddings:", error);
+
+      if (typeof error === "string" && error.includes("No GPU was available")) {
+        return Response.json({ error }, { status: 503 });
+      }
+
+      return Response.json({ error }, { status: 500 });
     }
 
     // @ts-expect-error
@@ -68,6 +53,6 @@ export default {
 
   curl -i --location --request POST 'http://127.0.0.1:54321/functions/v1/knn' \
     --header 'apiKey: sb_publishable_ACJWlzQHlZjBrEguHvfOxg_3BJgxAaH' \
-    --data '{"name":"Functions"}'
+    --data '{"query":"azram"}'
 
 */

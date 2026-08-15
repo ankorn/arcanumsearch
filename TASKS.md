@@ -128,8 +128,11 @@ if I can't do simple search better then fandom then I should offer something mor
 - [ ] add highlight to fandom wiki link 'https://en.wikipedia.org/wiki/Cat#:~:text=native%20felines'
 - [ ] if doc is from fandom, show info that it's official patch
 - [x] fix ccs center main container
-- [ ] fix css footer
-- [ ] check fetch in mutation
+- [x] fix css footer
+- [x] check fetch in mutation
+- [x] fix fancy text
+- [ ] predownload font
+
 
 #### backend: postgres database + pgvector; cloud function + hf inference api
 
@@ -142,8 +145,9 @@ if I can't do simple search better then fandom then I should offer something mor
  - [x] test hfInference with vpn that allows access to huggingface
  - [x] deploy connection to bd
 - [x] deploy feature extraction to hf spaces
-
 - [x] knn postges function
+- [ ] add 'title', 'content_raw' to data table
+- [x] fix "Error: No GPU was available after 60s"
 
 #### chat
 

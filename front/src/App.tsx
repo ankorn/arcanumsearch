@@ -5,19 +5,26 @@ import {
   QueryClientProvider,
   useMutation,
 } from "@tanstack/react-query";
-import "./App.css";
+import "./index.css";
 
 const queryClient = new QueryClient();
 
 interface SearchResult {
-  title: string;
+  id: string;
   url: string;
   score: number;
+  content: string;
 }
 
 interface SearchResponse {
   results: SearchResult[];
 }
+
+const getTitle = (content: string): string => {
+  return content
+    .substring(0, content.indexOf("."))
+    .replace("Original Post: ", " ");
+};
 
 const API_URL = "https://mfphsrdubggjqxvyuzil.supabase.co/functions/v1/knn";
 const API_KEY = "sb_publishable_XRNtK6CNXu6R2qOwelRE6w_SqIxMsVP";
@@ -42,6 +49,7 @@ function SearchApp() {
 
       return res.json();
     },
+    retry: 2,
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -52,86 +60,89 @@ function SearchApp() {
   };
 
   return (
-    <div className="arcanum-container">
-      <header className="arcanum-header">
-        <h1 className="arcanum-title">arcanumsearch</h1>
-        <p className="arcanum-desc">
-          cross-community semantic search for{" "}
-          <em>Arcanum: Of Steamworks and Magick Obscura</em>
-        </p>
-        <p className="arcanum-subdesc">
-          quests, stats, patches, modes, bugs, formulas, calculators — all in
-          one place
-        </p>
-      </header>
+    <>
+      <div className="arcanum-container">
+        <header className="arcanum-header">
+          <h1 className="arcanum-title">arcanumsearch</h1>
+          <p className="arcanum-desc">
+            cross-community semantic search for{" "}
+            <em>Arcanum: Of Steamworks and Magick Obscura</em>
+          </p>
+          <p className="arcanum-subdesc">
+            quests, stats, patches, modes, bugs, formulas, calculators — all in
+            one place
+          </p>
+        </header>
 
-      <form onSubmit={handleSubmit} className="arcanum-form">
-        <div className="input-wrapper">
-          <input
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Speak the words of searching..."
-            className="arcanum-input"
-          />
-          <button
-            type="submit"
-            disabled={mutation.isPending || !query.trim()}
-            className="arcanum-button"
-          >
-            {mutation.isPending ? "Scrying..." : "Search"}
-          </button>
+        <form onSubmit={handleSubmit} className="arcanum-form">
+          <div className="input-wrapper">
+            <input
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Speak the words of searching..."
+              className="arcanum-input"
+            />
+            <button
+              type="submit"
+              disabled={mutation.isPending || !query.trim()}
+              className="arcanum-button"
+            >
+              {mutation.isPending ? "Searching..." : "Search"}
+            </button>
+          </div>
+        </form>
+
+        <div className="results-area">
+          {mutation.isPending && (
+            <div className="state-message loading">
+              <div className="spinner" />
+              <span>Loading...</span>
+            </div>
+          )}
+
+          {mutation.isError && (
+            <div className="state-message error">
+              <span className="error-icon">⚠</span>
+              <span>{`Search failed: ${mutation.error.message}. Try again`}</span>
+            </div>
+          )}
+
+          {mutation.isSuccess && mutation.data.results.length === 0 && (
+            <div className="state-message empty">
+              No relevant documents found
+            </div>
+          )}
+
+          {mutation.isSuccess && mutation.data.results.length > 0 && (
+            <ul className="results-list">
+              {mutation.data.results.slice(0, 5).map((result, idx) => (
+                <li key={idx} className="result-item">
+                  <a
+                    href={result.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="result-link"
+                  >
+                    <span className="result-rank">{idx + 1}</span>
+                    <span className="result-title">
+                      {getTitle(result.content)}
+                    </span>
+                    <span className="result-arrow">→</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
-      </form>
-
-      <div className="results-area">
-        {mutation.isPending && (
-          <div className="state-message loading">
-            <div className="spinner" />
-            <span>The aether stirs... consulting the archives</span>
-          </div>
-        )}
-
-        {mutation.isError && (
-          <div className="state-message error">
-            <span className="error-icon">⚠</span>
-            <span>The scrying failed: {mutation.error.message}</span>
-          </div>
-        )}
-
-        {mutation.isSuccess && mutation.data.results.length === 0 && (
-          <div className="state-message empty">
-            No echoes found in the archives for this query.
-          </div>
-        )}
-
-        {mutation.isSuccess && mutation.data.results.length > 0 && (
-          <ul className="results-list">
-            {mutation.data.results.slice(0, 5).map((result, idx) => (
-              <li key={idx} className="result-item">
-                <a
-                  href={result.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="result-link"
-                >
-                  <span className="result-rank">{idx + 1}</span>
-                  <span className="result-title">{result.title}</span>
-                  <span className="result-arrow">→</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        )}
       </div>
-
       <footer className="arcanum-footer">
         <a
           href="https://github.com/ankorn/arcanumsearch"
           target="_blank"
           rel="noopener noreferrer"
         >
-          GitHub
+          github
         </a>
         <span className="footer-sep">·</span>
         <a
@@ -139,10 +150,10 @@ function SearchApp() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Hugging Face Model
+          huggingface
         </a>
       </footer>
-    </div>
+    </>
   );
 }
 
