@@ -65,6 +65,8 @@ function SearchApp() {
     }
   };
 
+  const isRetrying = mutation.isPending && mutation.failureCount > 0;
+
   return (
     <>
       <div className="arcanum-container">
@@ -103,7 +105,7 @@ function SearchApp() {
           {mutation.isPending && (
             <div className="state-message loading">
               <div className="spinner" />
-              <span>Loading...</span>
+              <span>{isRetrying ? "Retrying..." : "Loading..."}</span>
             </div>
           )}
 
