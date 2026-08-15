@@ -134,7 +134,7 @@ if I can't do simple search better then fandom then I should offer something mor
 - [ ] predownload font
 - [x] fix reddit format title
 - [x] deploy to gh pages
-- [ ] add 'Retrying' when retrying
+- [x] add 'Retrying' when retrying
 
 
 #### backend: postgres database + pgvector; cloud function + hf inference api
