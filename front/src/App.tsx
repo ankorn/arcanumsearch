@@ -88,7 +88,7 @@ function SearchApp() {
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search query"
+              placeholder="search query"
               className="arcanum-input"
             />
             <button
@@ -96,7 +96,7 @@ function SearchApp() {
               disabled={mutation.isPending || !query.trim()}
               className="arcanum-button"
             >
-              Search
+              search
             </button>
           </div>
         </form>
@@ -105,20 +105,20 @@ function SearchApp() {
           {mutation.isPending && (
             <div className="state-message loading">
               <div className="spinner" />
-              <span>{isRetrying ? "Retrying..." : "Loading..."}</span>
+              <span>{isRetrying ? "retrying..." : "loading..."}</span>
             </div>
           )}
 
           {mutation.isError && (
             <div className="state-message error">
               <span className="error-icon">⚠</span>
-              <span>{`Search failed: ${mutation.error.message}. Try again`}</span>
+              <span>{`search failed: ${mutation.error.message}, try again`}</span>
             </div>
           )}
 
           {mutation.isSuccess && mutation.data.results.length === 0 && (
             <div className="state-message empty">
-              No relevant documents found
+              no relevant documents found
             </div>
           )}
 
