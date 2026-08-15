@@ -21,15 +21,15 @@ interface SearchResponse {
 }
 
 const getTitle = (content: string): string => {
-  if (content.includes("Original Post: ")) {
-    content = content.replace("Original Post: ", "");
-    const end = content.indexOf(" User 1");
-    return content.substring(0, end);
+  content = content.replace("Original Post: ", "");
+
+  const index = content.search(/[.?!]/);
+
+  if (index === -1) {
+    return content.substring(0, 20);
   }
 
-  return content
-    .substring(0, content.indexOf("."))
-    .replace("Original Post: ", "");
+  return content.substring(0, index);
 };
 
 const API_URL = "https://mfphsrdubggjqxvyuzil.supabase.co/functions/v1/knn";
