@@ -132,6 +132,7 @@ if I can't do simple search better then fandom then I should offer something mor
 - [x] check fetch in mutation
 - [x] fix fancy text
 - [ ] predownload font
+- [x] fix reddit format title
 
 
 #### backend: postgres database + pgvector; cloud function + hf inference api
