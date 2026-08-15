@@ -155,3 +155,8 @@ if I can't do simple search better then fandom then I should offer something mor
 #### chat
 
 - RAG
+
+
+#### other
+- [ ] check if I can legally store reddit data with authors
+- [ ] make reddit post in r/arcanum
