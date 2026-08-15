@@ -133,6 +133,7 @@ if I can't do simple search better then fandom then I should offer something mor
 - [x] fix fancy text
 - [ ] predownload font
 - [x] fix reddit format title
+- [x] deploy to gh pages
 
 
 #### backend: postgres database + pgvector; cloud function + hf inference api

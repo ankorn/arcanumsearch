@@ -71,7 +71,7 @@ function SearchApp() {
         <header className="arcanum-header">
           <h1 className="arcanum-title">arcanumsearch</h1>
           <p className="arcanum-desc">
-            cross-community semantic search for{" "}
+            cross-community search for{" "}
             <em>Arcanum: Of Steamworks and Magick Obscura</em>
           </p>
           <p className="arcanum-subdesc">
@@ -86,7 +86,7 @@ function SearchApp() {
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Speak the words of searching..."
+              placeholder="Search query"
               className="arcanum-input"
             />
             <button
@@ -94,7 +94,7 @@ function SearchApp() {
               disabled={mutation.isPending || !query.trim()}
               className="arcanum-button"
             >
-              {mutation.isPending ? "Searching..." : "Search"}
+              Search
             </button>
           </div>
         </form>

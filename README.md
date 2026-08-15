@@ -1,6 +1,6 @@
 # arcanumsearch
 
-cross-community semantic search for Arcanum: Of Steamworks and Magick Obscura
+[cross-community search](https://ankorn.github.io/arcanumsearch/) for Arcanum: Of Steamworks and Magick Obscura
 
 search quests, stats, patches, modes, bugs, formulas, calculators - all in one place
 
