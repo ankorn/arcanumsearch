@@ -14,23 +14,12 @@ interface SearchResult {
   url: string;
   score: number;
   content: string;
+  title: string;
 }
 
 interface SearchResponse {
   results: SearchResult[];
 }
-
-const getTitle = (content: string): string => {
-  content = content.replace("Original Post: ", "");
-
-  const index = content.search(/[.?!]/);
-
-  if (index === -1) {
-    return content.substring(0, 20);
-  }
-
-  return content.substring(0, index);
-};
 
 const API_URL = "https://mfphsrdubggjqxvyuzil.supabase.co/functions/v1/knn";
 const API_KEY = "sb_publishable_XRNtK6CNXu6R2qOwelRE6w_SqIxMsVP";
@@ -125,7 +114,7 @@ function SearchApp() {
           {mutation.isSuccess && mutation.data.results.length > 0 && (
             <ul className="results-list">
               {mutation.data.results.slice(0, 5).map((result, idx) => (
-                <li key={idx} className="result-item">
+                <li key={result.id} className="result-item">
                   <a
                     href={result.url}
                     target="_blank"
@@ -133,9 +122,7 @@ function SearchApp() {
                     className="result-link"
                   >
                     <span className="result-rank">{idx + 1}</span>
-                    <span className="result-title">
-                      {getTitle(result.content)}
-                    </span>
+                    <span className="result-title">{result.title}</span>
                     <span className="result-arrow">→</span>
                   </a>
                 </li>

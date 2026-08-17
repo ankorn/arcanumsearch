@@ -151,7 +151,7 @@ if I can't do simple search better then fandom then I should offer something mor
  - [x] deploy connection to bd
 - [x] deploy feature extraction to hf spaces
 - [x] knn postges function
-- [ ] add 'title', 'content_raw' to data table
+- [x] add 'title', 'content_raw' to data table
 - [x] fix "Error: No GPU was available after 60s"
 
 #### chat
