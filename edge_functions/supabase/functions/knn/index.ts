@@ -34,7 +34,7 @@ export default {
     // @ts-expect-error
     const { data, error } = await ctx.supabase.rpc("knn", {
       query_embedding: embeddings?.[0],
-      match_threshold: -100,
+      match_threshold: 0.3,
     });
 
     if (error) {
