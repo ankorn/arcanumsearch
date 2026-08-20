@@ -154,6 +154,7 @@ if I can't do simple search better then fandom then I should offer something mor
 - [x] add 'title', 'content_raw' to data table
 - [x] fix "Error: No GPU was available after 60s"
 - [x] meaningful match_threshold: there's no 'Carl' in documents, but you still get 5 result with similarity 0.22-0.26
+- [ ] [bug] duplicate https://arcanum.fandom.com/wiki/Character_background; try query 'wizard'
 
 #### chat
 
