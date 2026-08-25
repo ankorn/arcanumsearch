@@ -139,7 +139,7 @@ if I can't do simple search better then fandom then I should offer something mor
   - [ ] clicks
 
 
-#### backend: postgres database + pgvector; cloud function + hf inference api
+#### backend: postgres database + pgvector; cloud function + hf zero gpu deploy
 
 - [x] store document embs: https://supabase.com/dashboard/project/mfphsrdubggjqxvyuzil
   - [x] upload manually as csv
