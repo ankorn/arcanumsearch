@@ -31,6 +31,7 @@
 - [x] (bug) vague queries are too vague: hard to find relevant document even for me
   - [x] prompt engineering did not work
   - [x] switched to 14 b qwen: recall@5 0.9 => 0.96; no too vague queries
+- [ ] us different(bigger) guide model; using different instance of the same model is questionable
 
 #### inference
 
