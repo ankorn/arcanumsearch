@@ -137,7 +137,9 @@ if I can't do simple search better then fandom then I should offer something mor
 - [x] deploy to gh pages
 - [x] add 'Retrying' when retrying
 - [ ] online metrics
-  - [ ] clicks
+  - [ ] CTR(click-through rate)
+  - [ ] zero-result rate
+  - [ ] user satisfaction
 
 
 #### backend: postgres database + pgvector; cloud function + hf zero gpu deploy
