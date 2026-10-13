@@ -116,7 +116,7 @@ if I can't do simple search better then fandom then I should offer something mor
 
 - [x] UAP is mentioned everywhere; will simple request 'UAP' will show original page?
   - no, but a lot of relevant docs from reddit
-- [ ] write 200 queries yourself, eval(one query that wiki website handles, one that not)
+- [ ] write 200 queries yourself, eval
 
 #### frontend
 
