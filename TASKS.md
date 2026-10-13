@@ -38,10 +38,6 @@
 - [x] (bug) duplicates of documents: removed duplicates
 - [ ] (bug): 228 enhanced_documents, not 229
 
-#### evaluation
-
-- [ ] write 200 queries yourself, eval(one query that wiki website handles, one that not)
-
 #### product idea rework
 
 in it's current state model app does nothing that arcanum.fandom.com search can't do; apparently their fandom search is good enough to handle typos and vague requests
@@ -120,6 +116,7 @@ if I can't do simple search better then fandom then I should offer something mor
 
 - [x] UAP is mentioned everywhere; will simple request 'UAP' will show original page?
   - no, but a lot of relevant docs from reddit
+- [ ] write 200 queries yourself, eval(one query that wiki website handles, one that not)
 
 #### frontend
 
@@ -141,17 +138,16 @@ if I can't do simple search better then fandom then I should offer something mor
   - [ ] zero-result rate
   - [ ] user satisfaction
 
-
 #### backend: postgres database + pgvector; cloud function + hf zero gpu deploy
 
 - [x] store document embs: https://supabase.com/dashboard/project/mfphsrdubggjqxvyuzil
   - [x] upload manually as csv
 - [ ] supabase auth
 - [x] edge function: https://supabase.com/docs/guides/functions/quickstart
- - [x] run locally
- - [x] [bug] no schema for postgres function
- - [x] test hfInference with vpn that allows access to huggingface
- - [x] deploy connection to bd
+- [x] run locally
+- [x] [bug] no schema for postgres function
+- [x] test hfInference with vpn that allows access to huggingface
+- [x] deploy connection to bd
 - [x] deploy feature extraction to hf spaces
 - [x] knn postges function
 - [x] add 'title', 'content_raw' to data table
@@ -161,9 +157,9 @@ if I can't do simple search better then fandom then I should offer something mor
 
 #### chat
 
-- RAG
-
+- [x] RAG
 
 #### other
+
 - [ ] check if I can legally store reddit data with authors
-- [ ] make reddit post in r/arcanum
+- [x] make reddit post in r/arcanum
