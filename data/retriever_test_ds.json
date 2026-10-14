@@ -168,5 +168,525 @@
     "query": "cannon pistl",
     "url": "https://arcanum.fandom.com/wiki/Hand_Cannon",
     "is_vague": true
+  },
+  {
+    "query": "character build planer",
+    "url": "https://www.reddit.com/r/arcanum/comments/y32r4s/arcanum_character_build_planer_is_ready_image/",
+    "is_vague": false
+  },
+  {
+    "query": "build calculator",
+    "url": "https://www.reddit.com/r/arcanum/comments/y32r4s/arcanum_character_build_planer_is_ready_image/",
+    "is_vague": true
+  },
+  {
+    "query": "late game area game crashes",
+    "url": "https://www.reddit.com/r/arcanum/comments/1mnq1f5/bug_when_traversing_lategame_area/",
+    "is_vague": false
+  },
+  {
+    "query": "void game crash",
+    "url": "https://www.reddit.com/r/arcanum/comments/1mnq1f5/bug_when_traversing_lategame_area/",
+    "is_vague": true
+  },
+  {
+    "query": "UAP",
+    "url": "https://arcanum.fandom.com/wiki/UAP_Page",
+    "is_vague": false
+  },
+  {
+    "query": "community patch",
+    "url": "https://arcanum.fandom.com/wiki/UAP_Page",
+    "is_vague": true
+  },
+  {
+    "query": "tula",
+    "url": "https://arcanum.fandom.com/wiki/Tulla",
+    "is_vague": false
+  },
+  {
+    "query": "mage city",
+    "url": "https://arcanum.fandom.com/wiki/Tulla",
+    "is_vague": true
+  },
+  {
+    "query": "flashing icon",
+    "url": "https://www.reddit.com/r/arcanum/comments/1avqnb7/what_means_the_flashing_icon_on_the_upper_right/",
+    "is_vague": false
+  },
+  {
+    "query": "flickering icon",
+    "url": "https://www.reddit.com/r/arcanum/comments/1avqnb7/what_means_the_flashing_icon_on_the_upper_right/",
+    "is_vague": true
+  },
+  {
+    "query": "humans in falcon ache quest",
+    "url": "https://arcanum.fandom.com/wiki/Remove_the_Humans_from_Falcon%27s_Ache",
+    "is_vague": false
+  },
+  {
+    "query": "humans in elf sacred place",
+    "url": "https://arcanum.fandom.com/wiki/Remove_the_Humans_from_Falcon%27s_Ache",
+    "is_vague": true
+  },
+  {
+    "query": "patch to fix graphics issues",
+    "url": "https://www.reddit.com/r/arcanum/comments/hmxvcl/anybody_got_a_patch_to_fix_this/",
+    "is_vague": false
+  },
+  {
+    "query": "graphics bug patch wi a fix",
+    "url": "https://www.reddit.com/r/arcanum/comments/hmxvcl/anybody_got_a_patch_to_fix_this/",
+    "is_vague": true
+  },
+  {
+    "query": "psychological book on intolerance",
+    "url": "https://arcanum.fandom.com/wiki/Psychological_Treatise_On_Intolerance",
+    "is_vague": false
+  },
+  {
+    "query": "intolerqnce book",
+    "url": "https://arcanum.fandom.com/wiki/Psychological_Treatise_On_Intolerance",
+    "is_vague": true
+  },
+  {
+    "query": "general practitioner",
+    "url": "https://arcanum.fandom.com/wiki/General_Practitioner_(Shrouded_Hills)",
+    "is_vague": false
+  },
+  {
+    "query": "shrouded hills clinic",
+    "url": "https://arcanum.fandom.com/wiki/General_Practitioner_(Shrouded_Hills)",
+    "is_vague": true
+  },
+  {
+    "query": "broken cathedral",
+    "url": "https://arcanum.fandom.com/wiki/The_Broken_Cathedral",
+    "is_vague": false
+  },
+  {
+    "query": "cathedral ruins near Roseborough",
+    "url": "https://arcanum.fandom.com/wiki/The_Broken_Cathedral",
+    "is_vague": true
+  },
+  {
+    "query": "fatigue reducer",
+    "url": "https://arcanum.fandom.com/wiki/Fatigue_Limiter",
+    "is_vague": false
+  },
+  {
+    "query": "anto fatigue loss tech consumable",
+    "url": "https://arcanum.fandom.com/wiki/Fatigue_Limiter",
+    "is_vague": true
+  },
+  {
+    "query": "void creatures stopped spawning",
+    "url": "https://www.reddit.com/r/arcanum/comments/1tt56fg/nooo/",
+    "is_vague": false
+  },
+  {
+    "query": "void creatures spawn limit",
+    "url": "https://www.reddit.com/r/arcanum/comments/1tt56fg/nooo/",
+    "is_vague": true
+  },
+  {
+    "query": "mods that fix bugs, add lost content, increase stability",
+    "url": "https://www.reddit.com/r/arcanum/comments/1ateqa2/long_time_no_play/",
+    "is_vague": false
+  },
+  {
+    "query": "mods for bugs content stability",
+    "url": "https://www.reddit.com/r/arcanum/comments/1ateqa2/long_time_no_play/",
+    "is_vague": true
+  },
+  {
+    "query": "Anna's Herbals",
+    "url": "https://arcanum.fandom.com/wiki/Anna%27s_Herbals",
+    "is_vague": false
+  },
+  {
+    "query": "herbals shop Tarant",
+    "url": "https://arcanum.fandom.com/wiki/Anna%27s_Herbals",
+    "is_vague": true
+  },
+  {
+    "query": "eye gear schema",
+    "url": "https://arcanum.fandom.com/wiki/Eye_Gear",
+    "is_vague": false
+  },
+  {
+    "query": "eye gear recipe",
+    "url": "https://arcanum.fandom.com/wiki/Eye_Gear",
+    "is_vague": true
+  },
+  {
+    "query": "ancesctral sword",
+    "url": "https://arcanum.fandom.com/wiki/Ancestral_Sword",
+    "is_vague": false
+  },
+  {
+    "query": "ancesctral swrd",
+    "url": "https://arcanum.fandom.com/wiki/Ancestral_Sword",
+    "is_vague": true
+  },
+  {
+    "query": "Magnus does not wont to join the party",
+    "url": "https://www.reddit.com/r/arcanum/comments/1hev80o/magnus_wont_join_the_party/",
+    "is_vague": false
+  },
+  {
+    "query": "Magnus won't join",
+    "url": "https://www.reddit.com/r/arcanum/comments/1hev80o/magnus_wont_join_the_party/",
+    "is_vague": true
+  },
+  {
+    "query": "throwing weapons",
+    "url": "https://arcanum.fandom.com/wiki/Throwing_Weapons",
+    "is_vague": false
+  },
+  {
+    "query": "throw weapoys",
+    "url": "https://arcanum.fandom.com/wiki/Throwing_Weapons",
+    "is_vague": true
+  },
+  {
+    "query": "full screen issue",
+    "url": "https://www.reddit.com/r/arcanum/comments/1gmp4uc/full_screen_issues_on_windows_10/",
+    "is_vague": false
+  },
+  {
+    "query": "full screen bug",
+    "url": "https://www.reddit.com/r/arcanum/comments/1gmp4uc/full_screen_issues_on_windows_10/",
+    "is_vague": true
+  },
+  {
+    "query": "half-ogres",
+    "url": "https://arcanum.fandom.com/wiki/Half-Ogres",
+    "is_vague": false
+  },
+  {
+    "query": "haf ogres",
+    "url": "https://arcanum.fandom.com/wiki/Half-Ogres",
+    "is_vague": true
+  },
+  {
+    "query": "Hardin pass location",
+    "url": "https://arcanum.fandom.com/wiki/Hardin%27s_Pass",
+    "is_vague": false
+  },
+  {
+    "query": "pass throug mountain near Quintarra",
+    "url": "https://arcanum.fandom.com/wiki/Hardin%27s_Pass",
+    "is_vague": true
+  },
+  {
+    "query": "Kerlin altar",
+    "url": "https://arcanum.fandom.com/wiki/Kerlin%27s_Altar",
+    "is_vague": false
+  },
+  {
+    "query": "altar of pagan god near Gery Mountain",
+    "url": "https://arcanum.fandom.com/wiki/Kerlin%27s_Altar",
+    "is_vague": true
+  },
+  {
+    "query": "Preston Radcliff",
+    "url": "https://arcanum.fandom.com/wiki/Preston_Radcliff",
+    "is_vague": false
+  },
+  {
+    "query": "Radcliff",
+    "url": "https://arcanum.fandom.com/wiki/Preston_Radcliff",
+    "is_vague": true
+  },
+  {
+    "query": "pick pocket",
+    "url": "https://arcanum.fandom.com/wiki/Pick_Pocket",
+    "is_vague": false
+  },
+  {
+    "query": "pick poxket",
+    "url": "https://arcanum.fandom.com/wiki/Pick_Pocket",
+    "is_vague": true
+  },
+  {
+    "query": "sobbing onion",
+    "url": "https://arcanum.fandom.com/wiki/The_Sobbing_Onion",
+    "is_vague": false
+  },
+  {
+    "query": "Caladon tavern",
+    "url": "https://arcanum.fandom.com/wiki/The_Sobbing_Onion",
+    "is_vague": true
+  },
+  {
+    "query": "perception",
+    "url": "https://arcanum.fandom.com/wiki/PE",
+    "is_vague": false
+  },
+  {
+    "query": "PE statistic",
+    "url": "https://arcanum.fandom.com/wiki/PE",
+    "is_vague": true
+  },
+  {
+    "query": "lady Druella",
+    "url": "https://arcanum.fandom.com/wiki/Lady_Druella",
+    "is_vague": false
+  },
+  {
+    "query": "Driella",
+    "url": "https://arcanum.fandom.com/wiki/Lady_Druella",
+    "is_vague": true
+  },
+  {
+    "query": "unique items",
+    "url": "https://arcanum.fandom.com/wiki/Unique_Items",
+    "is_vague": false
+  },
+  {
+    "query": "uniq items",
+    "url": "https://arcanum.fandom.com/wiki/Unique_Items",
+    "is_vague": true
+  },
+  {
+    "query": "npcs to pick pocket",
+    "url": "https://www.reddit.com/r/arcanum/comments/1rmn04w/which_npcs_are_worth_pickpocketing/",
+    "is_vague": false
+  },
+  {
+    "query": "npcs to pick pocker",
+    "url": "https://www.reddit.com/r/arcanum/comments/1rmn04w/which_npcs_are_worth_pickpocketing/",
+    "is_vague": true
+  },
+  {
+    "query": "install UAP on mac using crossover",
+    "url": "https://www.reddit.com/r/arcanum/comments/xq6opv/help_installing_uap_on_maccrossover/",
+    "is_vague": false
+  },
+  {
+    "query": "install UAP on mac",
+    "url": "https://www.reddit.com/r/arcanum/comments/xq6opv/help_installing_uap_on_maccrossover/",
+    "is_vague": true
+  },
+  {
+    "query": "Tarant rats quest",
+    "url": "https://arcanum.fandom.com/wiki/Rid_Mr._Plough%27s_Warehouses_of_Rats",
+    "is_vague": false
+  },
+  {
+    "query": "Tarnat rats quest",
+    "url": "https://arcanum.fandom.com/wiki/Rid_Mr._Plough%27s_Warehouses_of_Rats",
+    "is_vague": true
+  },
+  {
+    "query": "Dodge master quest bug",
+    "url": "https://www.reddit.com/r/arcanum/comments/1o0g2eq/dodge_master_quest_bugged_out/",
+    "is_vague": false
+  },
+  {
+    "query": "Dodge master bug",
+    "url": "https://www.reddit.com/r/arcanum/comments/1o0g2eq/dodge_master_quest_bugged_out/",
+    "is_vague": true
+  },
+  {
+    "query": "gambling",
+    "url": "https://arcanum.fandom.com/wiki/Gambling",
+    "is_vague": false
+  },
+  {
+    "query": "tgambling",
+    "url": "https://arcanum.fandom.com/wiki/Gambling",
+    "is_vague": true
+  },
+  {
+    "query": "gambling master",
+    "url": "https://arcanum.fandom.com/wiki/Gurin_Rockharrow",
+    "is_vague": false
+  },
+  {
+    "query": "gambling mastrer",
+    "url": "https://arcanum.fandom.com/wiki/Gurin_Rockharrow",
+    "is_vague": true
+  },
+  {
+    "query": "npcs attack after fight in Tarant",
+    "url": "https://www.reddit.com/r/arcanum/comments/jt1chd/npcs_attacking_me_in_tarant_when_involved_in/",
+    "is_vague": false
+  },
+  {
+    "query": "Tarnat guards attack after killing npc",
+    "url": "https://www.reddit.com/r/arcanum/comments/jt1chd/npcs_attacking_me_in_tarant_when_involved_in/",
+    "is_vague": true
+  },
+  {
+    "query": "control beast",
+    "url": "https://arcanum.fandom.com/wiki/Control_Beast",
+    "is_vague": false
+  },
+  {
+    "query": "control bist",
+    "url": "https://arcanum.fandom.com/wiki/Control_Beast",
+    "is_vague": true
+  },
+  {
+    "query": "noise",
+    "url": "https://arcanum.fandom.com/wiki/NP",
+    "is_vague": false
+  },
+  {
+    "query": "what does NP stand for",
+    "url": "https://arcanum.fandom.com/wiki/NP",
+    "is_vague": true
+  },
+  {
+    "query": "dodge",
+    "url": "https://arcanum.fandom.com/wiki/Dodge",
+    "is_vague": false
+  },
+  {
+    "query": "dogde",
+    "url": "https://arcanum.fandom.com/wiki/Dodge",
+    "is_vague": true
+  },
+  {
+    "query": "vision helmet schema",
+    "url": "https://arcanum.fandom.com/wiki/Helmet_of_Vision",
+    "is_vague": false
+  },
+  {
+    "query": "vizion helm schema",
+    "url": "https://arcanum.fandom.com/wiki/Helmet_of_Vision",
+    "is_vague": true
+  },
+  {
+    "query": "phantasm fiend",
+    "url": "https://arcanum.fandom.com/wiki/Phantasmal_Fiend",
+    "is_vague": false
+  },
+  {
+    "query": "phantasm summon",
+    "url": "https://arcanum.fandom.com/wiki/Phantasmal_Fiend",
+    "is_vague": true
+  },
+  {
+    "query": "arcanum beta files",
+    "url": "https://arcanum.fandom.com/wiki/Arcanum_Beta",
+    "is_vague": false
+  },
+  {
+    "query": "arcanuym beta",
+    "url": "https://arcanum.fandom.com/wiki/Arcanum_Beta",
+    "is_vague": true
+  },
+  {
+    "query": "zoological society",
+    "url": "https://arcanum.fandom.com/wiki/The_Zoological_Society",
+    "is_vague": false
+  },
+  {
+    "query": "zoo museam Tarnt",
+    "url": "https://arcanum.fandom.com/wiki/The_Zoological_Society",
+    "is_vague": true
+  },
+  {
+    "query": "disarm traps",
+    "url": "https://arcanum.fandom.com/wiki/Disarm_Traps",
+    "is_vague": false
+  },
+  {
+    "query": "remove trraps",
+    "url": "https://arcanum.fandom.com/wiki/Disarm_Traps",
+    "is_vague": true
+  },
+  {
+    "query": "game endings",
+    "url": "https://arcanum.fandom.com/wiki/Endings",
+    "is_vague": false
+  },
+  {
+    "query": "possible game finals",
+    "url": "https://arcanum.fandom.com/wiki/Endings",
+    "is_vague": true
+  },
+  {
+    "query": "will clan mines clear",
+    "url": "https://arcanum.fandom.com/wiki/Clear_the_Mines",
+    "is_vague": false
+  },
+  {
+    "query": "will clan mines kill mobs",
+    "url": "https://arcanum.fandom.com/wiki/Clear_the_Mines",
+    "is_vague": true
+  },
+  {
+    "query": "black root inn strongbox quest",
+    "url": "https://arcanum.fandom.com/wiki/The_Innkeeper%27s_Strongbox",
+    "is_vague": false
+  },
+  {
+    "query": "black root inn get strongbosx",
+    "url": "https://arcanum.fandom.com/wiki/The_Innkeeper%27s_Strongbox",
+    "is_vague": true
+  },
+  {
+    "query": "acid gun schematic",
+    "url": "https://arcanum.fandom.com/wiki/Acid_Gun",
+    "is_vague": false
+  },
+  {
+    "query": "acid gun schema",
+    "url": "https://arcanum.fandom.com/wiki/Acid_Gun",
+    "is_vague": true
+  },
+  {
+    "query": "character logbook",
+    "url": "https://arcanum.fandom.com/wiki/Logbook",
+    "is_vague": false
+  },
+  {
+    "query": "character diary",
+    "url": "https://arcanum.fandom.com/wiki/Logbook",
+    "is_vague": true
+  },
+  {
+    "query": "timeline",
+    "url": "https://arcanum.fandom.com/wiki/Timeline",
+    "is_vague": false
+  },
+  {
+    "query": "eras",
+    "url": "https://arcanum.fandom.com/wiki/Timeline",
+    "is_vague": true
+  },
+  {
+    "query": "Sunthia Boggs quest",
+    "url": "https://arcanum.fandom.com/wiki/Cynthia_Boggs",
+    "is_vague": false
+  },
+  {
+    "query": "isle of despair woman wants to escape",
+    "url": "https://arcanum.fandom.com/wiki/Cynthia_Boggs",
+    "is_vague": true
+  },
+  {
+    "query": "stonecutter clan cave",
+    "url": "https://arcanum.fandom.com/wiki/Stonecutter_Clan",
+    "is_vague": false
+  },
+  {
+    "query": "stonecuter lcan dungeon",
+    "url": "https://arcanum.fandom.com/wiki/Stonecutter_Clan",
+    "is_vague": true
+  },
+  {
+    "query": "game glitches, despawns bodies, artifacts",
+    "url": "https://www.reddit.com/r/arcanum/comments/14uno9m/why_does_this_happen_i_keep_getting_graphical/",
+    "is_vague": false
+  },
+  {
+    "query": "game glitches, artifacts",
+    "url": "https://www.reddit.com/r/arcanum/comments/14uno9m/why_does_this_happen_i_keep_getting_graphical/",
+    "is_vague": true
   }
 ]
