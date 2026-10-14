@@ -108,5 +108,65 @@
     "query": "steem community patch does not work",
     "url": "https://www.reddit.com/r/arcanum/comments/1apyooq/starting_game_for_first_time_but_having_trouble/",
     "is_vague": true
+  },
+  {
+    "query": "Qintarra location quest",
+    "url": "https://arcanum.fandom.com/wiki/Find_Qintarra",
+    "is_vague": false
+  },
+  {
+    "query": "find elves",
+    "url": "https://arcanum.fandom.com/wiki/Find_Qintarra",
+    "is_vague": true
+  },
+  {
+    "query": "magick mastery book",
+    "url": "https://arcanum.fandom.com/wiki/Mastery_of_the_Magickal_Arts",
+    "is_vague": false
+  },
+  {
+    "query": "magic book",
+    "url": "https://arcanum.fandom.com/wiki/Mastery_of_the_Magickal_Arts",
+    "is_vague": true
+  },
+  {
+    "query": "character background",
+    "url": "https://arcanum.fandom.com/wiki/Character_background",
+    "is_vague": false
+  },
+  {
+    "query": "main hero backgraund",
+    "url": "https://arcanum.fandom.com/wiki/Character_background",
+    "is_vague": true
+  },
+  {
+    "query": "combat skills",
+    "url": "https://arcanum.fandom.com/wiki/Combat_Skills",
+    "is_vague": false
+  },
+  {
+    "query": "fight abilitis",
+    "url": "https://arcanum.fandom.com/wiki/Combat_Skills",
+    "is_vague": true
+  },
+  {
+    "query": "mod recommendations for first time player",
+    "url": "https://www.reddit.com/r/arcanum/comments/uijzp9/new_arcanum_player_looking_for_mod_recommendations/",
+    "is_vague": false
+  },
+  {
+    "query": "best mods for newbie",
+    "url": "https://www.reddit.com/r/arcanum/comments/uijzp9/new_arcanum_player_looking_for_mod_recommendations/",
+    "is_vague": true
+  },
+  {
+    "query": "hand cannon",
+    "url": "https://arcanum.fandom.com/wiki/Hand_Cannon",
+    "is_vague": false
+  },
+  {
+    "query": "cannon pistl",
+    "url": "https://arcanum.fandom.com/wiki/Hand_Cannon",
+    "is_vague": true
   }
 ]
