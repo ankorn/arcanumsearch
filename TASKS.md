@@ -119,14 +119,14 @@ if I can't do simple search better then fandom then I should offer something mor
 - [ ] write 200 queries yourself, eval
   - [ ] (bug) recall@5 0.83 -> 0.815; ndcg@10 0.753 -> 0.737
     - gap between synthetic train data and hand labeled test data?
-    - [ ] run separetly on specific, vague
+    - [x] run separetly on specific, vague: recall@5 95% CI [0.0000, 0.0521]; ndcg@10 95% CI [-0.0386, 0.0309]
     - [x] paired bootstrap, confidence intervals: recall@5 95% CI = [-0.0455, 0.0152]; ndcg@10 95% CI = [-0.0445, 0.0146]; so no significant result
-      - [ ] check synth data quality
-      - [ ] check train setup
-      - [x] check check if both models near ceiling
-      - [ ] hold out synth validation split, of size 2000
-      - [x] check 6 queries that got worse on recall: all vague
-      - [x] remvoe bad examples from test ds
+    - [ ] check synth data quality
+    - [ ] check train setup
+    - [x] check check if both models near ceiling
+    - [ ] hold out synth validation split, of size 2000; eval base vs fine-tuned on that split
+    - [x] check 6 queries that got worse on recall: all vague
+    - [x] remvoe bad examples from test ds
 
 #### frontend
 
