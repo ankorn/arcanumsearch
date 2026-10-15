@@ -750,16 +750,6 @@
     "is_vague": true
   },
   {
-    "query": "mod/patch inquiry",
-    "url": "https://www.reddit.com/r/arcanum/comments/8tvhf0/modpatch_inquiry/",
-    "is_vague": false
-  },
-  {
-    "query": "mod pstch inquiry",
-    "url": "https://www.reddit.com/r/arcanum/comments/8tvhf0/modpatch_inquiry/",
-    "is_vague": true
-  },
-  {
     "query": "feather weight axe schematic",
     "url": "https://arcanum.fandom.com/wiki/Feather-Weight_Axe",
     "is_vague": false
@@ -900,16 +890,6 @@
     "is_vague": true
   },
   {
-    "query": "arcanum locations",
-    "url": "https://arcanum.fandom.com/wiki/Arcanum",
-    "is_vague": false
-  },
-  {
-    "query": "arcanoom world",
-    "url": "https://arcanum.fandom.com/wiki/Arcanum",
-    "is_vague": true
-  },
-  {
     "query": "mage",
     "url": "https://arcanum.fandom.com/wiki/Mage",
     "is_vague": false
@@ -967,16 +947,6 @@
   {
     "query": "Volinger follow",
     "url": "https://www.reddit.com/r/arcanum/comments/y2wpiz/spoiler_alternate_vollinger_as_a_follower/",
-    "is_vague": true
-  },
-  {
-    "query": "steam install UAP after changing config",
-    "url": "https://www.reddit.com/r/arcanum/comments/rv49of/i_need_help_with_the_game_to_run/",
-    "is_vague": false
-  },
-  {
-    "query": "steam install unofficial patch after changing config",
-    "url": "https://www.reddit.com/r/arcanum/comments/rv49of/i_need_help_with_the_game_to_run/",
     "is_vague": true
   },
   {
