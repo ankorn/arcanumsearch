@@ -117,6 +117,7 @@ if I can't do simple search better then fandom then I should offer something mor
 - [x] UAP is mentioned everywhere; will simple request 'UAP' will show original page?
   - no, but a lot of relevant docs from reddit
 - [ ] write 200 queries yourself, eval
+  - [ ] (bug) recall@5 0.823 -> 0.809; ndcg@10 0.748 -> 0.757
 
 #### frontend
 
