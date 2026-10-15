@@ -130,16 +130,6 @@
     "is_vague": true
   },
   {
-    "query": "character background",
-    "url": "https://arcanum.fandom.com/wiki/Character_background",
-    "is_vague": false
-  },
-  {
-    "query": "main hero backgraund",
-    "url": "https://arcanum.fandom.com/wiki/Character_background",
-    "is_vague": true
-  },
-  {
     "query": "combat skills",
     "url": "https://arcanum.fandom.com/wiki/Combat_Skills",
     "is_vague": false
