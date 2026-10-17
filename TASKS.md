@@ -110,14 +110,17 @@ if I can't do simple search better then fandom then I should offer something mor
 
 #### train
 
-- [ ] rerank: NDCG
+- [x] retriever trainer: used same pipeline as for quests retriever
+- [ ] reranker
+  - [x] eval before train: {'val-hard-negatives_map': 0.8845814977973568, 'val-hard-negatives_mrr@10': 0.8845814977973568, 'val-hard-negatives_ndcg@10': 0.9141341657696732}
+  - [ ] train
 
 #### eval
 
 - [x] UAP is mentioned everywhere; will simple request 'UAP' will show original page?
   - no, but a lot of relevant docs from reddit
-- [ ] write 200 queries yourself, eval
-  - [ ] (bug) recall@5 0.83 -> 0.815; ndcg@10 0.753 -> 0.737
+- [x] write 200 queries yourself, eval
+  - [x] (bug) recall@5 0.83 -> 0.815; ndcg@10 0.753 -> 0.737
     - gap between synthetic train data and hand labeled test data?
     - [x] run separetly on specific, vague: recall@5 95% CI [0.0000, 0.0521]; ndcg@10 95% CI [-0.0386, 0.0309]
     - [x] paired bootstrap, confidence intervals: recall@5 95% CI = [-0.0455, 0.0152]; ndcg@10 95% CI = [-0.0445, 0.0146]; so no significant result
