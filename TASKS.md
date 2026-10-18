@@ -111,7 +111,7 @@ if I can't do simple search better then fandom then I should offer something mor
 #### train
 
 - [x] retriever trainer: used same pipeline as for quests retriever: recall@5 0.77 -> 0.82
-  - [ ] 4 hard negs per query, margin 0.02, epochs 2, default guide model:
+  - [x] 4 hard negs per query, margin 0.02, epochs 2, sentence-transformers/all-MiniLM-L6-v2 guide: recall@5 0.764 -> 0.787
 - [x] reranker
   - [x] eval before train: {'val-hard-negatives_map': 0.8845814977973568, 'val-hard-negatives_mrr@10': 0.8845814977973568, 'val-hard-negatives_ndcg@10': 0.9141341657696732}
   - [x] train
