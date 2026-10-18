@@ -110,10 +110,14 @@ if I can't do simple search better then fandom then I should offer something mor
 
 #### train
 
-- [x] retriever trainer: used same pipeline as for quests retriever
-- [ ] reranker
+- [x] retriever trainer: used same pipeline as for quests retriever: recall@5 0.77 -> 0.82
+  - [ ] 4 hard negs per query, margin 0.02, epochs 2:
+- [x] reranker
   - [x] eval before train: {'val-hard-negatives_map': 0.8845814977973568, 'val-hard-negatives_mrr@10': 0.8845814977973568, 'val-hard-negatives_ndcg@10': 0.9141341657696732}
-  - [ ] train
+  - [x] train
+    - [x] 2 hard neg per query: ndcg@10 plateaus at 0.95, val loss at 0.33 after 50 steps
+    - [x] 4 hard negs per query, margin 0.02, epochs 2: ndcg@10 0.933 -> 0.955; 95% CI [+0.0141, +0.0425] on synth eval ds(questionable because same ds was used for early stopping, so need CI on hand-labeled ds)
+    - [x] reeval initial with new hard neg params: 0.933
 
 #### eval
 
@@ -130,6 +134,7 @@ if I can't do simple search better then fandom then I should offer something mor
     - [ ] hold out synth validation split, of size 2000; eval base vs fine-tuned on that split
     - [x] check 6 queries that got worse on recall: all vague
     - [x] remvoe bad examples from test ds
+  - [ ] paired bootstrap + CI on hand-labeled ds for retriever + reranker
 
 #### frontend
 
