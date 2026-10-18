@@ -111,7 +111,7 @@ if I can't do simple search better then fandom then I should offer something mor
 #### train
 
 - [x] retriever trainer: used same pipeline as for quests retriever: recall@5 0.77 -> 0.82
-  - [ ] 4 hard negs per query, margin 0.02, epochs 2:
+  - [ ] 4 hard negs per query, margin 0.02, epochs 2, default guide model:
 - [x] reranker
   - [x] eval before train: {'val-hard-negatives_map': 0.8845814977973568, 'val-hard-negatives_mrr@10': 0.8845814977973568, 'val-hard-negatives_ndcg@10': 0.9141341657696732}
   - [x] train
@@ -126,7 +126,7 @@ if I can't do simple search better then fandom then I should offer something mor
 - [x] write 200 queries yourself, eval
   - [x] (bug) recall@5 0.83 -> 0.815; ndcg@10 0.753 -> 0.737
     - gap between synthetic train data and hand labeled test data?
-    - [x] run separetly on specific, vague: recall@5 95% CI [0.0000, 0.0521]; ndcg@10 95% CI [-0.0386, 0.0309]
+    - [x] run separetly on specific: recall@5 95% CI [0.0000, 0.0521]; ndcg@10 95% CI [-0.0386, 0.0309]
     - [x] paired bootstrap, confidence intervals: recall@5 95% CI = [-0.0455, 0.0152]; ndcg@10 95% CI = [-0.0445, 0.0146]; so no significant result
     - [ ] check synth data quality
     - [ ] check train setup
