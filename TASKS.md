@@ -112,7 +112,8 @@ if I can't do simple search better then fandom then I should offer something mor
 
 - [x] retriever trainer: used same pipeline as for quests retriever: recall@5 0.77 -> 0.82
   - [x] 4 hard negs per query, margin 0.02, epochs 2, all-MiniLM-L6-v2 guide: recall@5 0.764 -> 0.787
-  - [x] 4 hard negs per query, epochs 2, sampling_strategy "top", all-MiniLM-L6-v2 guide: recall@5 0.764 ->
+  - [x] 4 hard negs per query, epochs 2, sampling_strategy "top", all-MiniLM-L6-v2 guide: recall@5 0.764 -> 0.810
+  - [x] 4 hard negs per query, epochs 2, sampling_strategy "top", all-MiniLM-L6-v2 guide, no early stopping: recall@5 0.764 -> 0.813
 - [x] reranker
   - [x] eval before train: {'val-hard-negatives_map': 0.8845814977973568, 'val-hard-negatives_mrr@10': 0.8845814977973568, 'val-hard-negatives_ndcg@10': 0.9141341657696732}
   - [x] train
