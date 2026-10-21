@@ -110,7 +110,7 @@ if I can't do simple search better then fandom then I should offer something mor
 - [x] genenrate dataset using qwen3-6-35b-a3b since this is the llm taht will generate queries in prodcution
   - [x] use vllm
   - [x] split 0.8 0.1 0.1 without shared documents, shuffle
-- [ ] add reasonably vague queries and missplellings only in arcanum specific names, since llm under agent will fix general
+- [x] add reasonably vague queries and missplellings only in arcanum specific names, since llm under agent will fix general: arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
 
 #### train
 
@@ -125,7 +125,9 @@ if I can't do simple search better then fandom then I should offer something mor
     - [x] 4 hard negs per query, margin 0.02, epochs 2: ndcg@10 0.933 -> 0.955; 95% CI [+0.0141, +0.0425] on synth eval ds(questionable because same ds was used for early stopping, so need CI on hand-labeled ds)
     - [x] reeval initial with new hard neg params: 0.933
 - [x] train retriever on "arcanumchat-cross-platform-qwen-36-a3b-fp8"
-  - recall@5 0.966490 ndcg@10 0.929574
+  - initial: recall@5 0.966490; ndcg@10 0.929574
+- [x] train on arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
+  - intial recall@10 0.992958; ndcg@10 0.929923
 
 #### eval
 
