@@ -110,7 +110,8 @@ if I can't do simple search better then fandom then I should offer something mor
 - [x] genenrate dataset using qwen3-6-35b-a3b since this is the llm taht will generate queries in prodcution
   - [x] use vllm
   - [x] split 0.8 0.1 0.1 without shared documents, shuffle
-- [x] add reasonably vague queries and missplellings only in arcanum specific names, since llm under agent will fix general: arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
+- [x] add 10% reasonably vague queries and missplellings only in arcanum specific names, since llm under agent will fix general: arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
+  - [x] add 10% seems to low, do 50%
 
 #### train
 
