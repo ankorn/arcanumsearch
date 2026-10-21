@@ -105,10 +105,10 @@ if I can't do simple search better then fandom then I should offer something mor
 
 #### synthetic data
 
-- [ ] use modern gemma4 instead of qwen
 - [x] stress in prompt that queries should not contain hidden info like exp, notes, part 1, etc
-- [ ] remove vague or regenerate without: qwen3-6-35b-a3b behind agent won't need it
-- [ ] genenrate dataset using qwen3-6-35b-a3b since this is the llm taht will generate queries in prodcution
+- [x] remove vague or regenerate without: qwen3-6-35b-a3b behind agent won't need it
+- [x] genenrate dataset using qwen3-6-35b-a3b since this is the llm taht will generate queries in prodcution
+  - [x] use vllm
 
 #### train
 
