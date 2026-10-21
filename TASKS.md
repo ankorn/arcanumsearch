@@ -109,6 +109,7 @@ if I can't do simple search better then fandom then I should offer something mor
 - [x] remove vague or regenerate without: qwen3-6-35b-a3b behind agent won't need it
 - [x] genenrate dataset using qwen3-6-35b-a3b since this is the llm taht will generate queries in prodcution
   - [x] use vllm
+  - [x] split 0.8 0.1 0.1 without shared documents, shuffle
 
 #### train
 
