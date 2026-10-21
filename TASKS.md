@@ -123,6 +123,8 @@ if I can't do simple search better then fandom then I should offer something mor
     - [x] 2 hard neg per query: ndcg@10 plateaus at 0.95, val loss at 0.33 after 50 steps
     - [x] 4 hard negs per query, margin 0.02, epochs 2: ndcg@10 0.933 -> 0.955; 95% CI [+0.0141, +0.0425] on synth eval ds(questionable because same ds was used for early stopping, so need CI on hand-labeled ds)
     - [x] reeval initial with new hard neg params: 0.933
+- [x] train retriever on "arcanumchat-cross-platform-qwen-36-a3b-fp8"
+  - recall@5 0.966490 ndcg@10 0.929574
 
 #### eval
 
