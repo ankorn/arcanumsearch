@@ -127,8 +127,12 @@ if I can't do simple search better then fandom then I should offer something mor
     - [x] reeval initial with new hard neg params: 0.933
 - [x] train retriever on "arcanumchat-cross-platform-qwen-36-a3b-fp8"
   - initial: recall@5 0.966490; ndcg@10 0.929574
-- [x] train on arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
+- [x] 10% vague: train on arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
   - intial recall@10 0.992958; ndcg@10 0.929923
+- [x] 60% vague: train on arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
+  - intial recall@10 0.961887; ndcg@10 0.868659
+- [x] 80% vague: train on arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
+  - intial recall@10 0.979094; ndcg@10 0.890320
 
 #### eval
 
