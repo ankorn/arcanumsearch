@@ -109,7 +109,7 @@ if I can't do simple search better then fandom then I should offer something mor
 - [x] remove vague or regenerate without: qwen3-6-35b-a3b behind agent won't need it
 - [x] genenrate dataset using qwen3-6-35b-a3b since this is the llm taht will generate queries in prodcution
   - [x] use vllm
-  - [x] split 0.8 0.1 0.1 without shared documents, shuffle
+  - [x] split 0.8 0.1 0.1 without shared documents, shuffle to not get data leakage
 - [x] add 10% reasonably vague queries and missplellings only in arcanum specific names, since llm under agent will fix general: arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
   - [x] add 10% seems to low, do 50%
 
@@ -127,12 +127,15 @@ if I can't do simple search better then fandom then I should offer something mor
     - [x] reeval initial with new hard neg params: 0.933
 - [x] train retriever on "arcanumchat-cross-platform-qwen-36-a3b-fp8"
   - initial: recall@5 0.966490; ndcg@10 0.929574
-- [x] 10% vague: train on arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
+- [x] 10% vague: train retriever on arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
   - intial recall@10 0.992958; ndcg@10 0.929923
-- [x] 60% vague: train on arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
+- [x] 60% vague: train retriever on arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
   - intial recall@10 0.961887; ndcg@10 0.868659
-- [x] 80% vague: train on arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
+- [x] 80% vague: train retriever on arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
   - intial recall@10 0.979094; ndcg@10 0.890320
+  - no vague: recall@10 0.926 -> 0.947; 95% CI = [-0.0211, 0.0632]; ndcg@10 0.868 -> 0.864 95% CI = [-0.0385, 0.0304]
+  - vague: recall@10 0.868 -> 0.894 95% CI = [0.0000, 0.0579]; ndcg@10 0.766 -> 0.763 95% CI = [-0.0285, 0.0236]
+- [ ] train reranker on arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
 
 #### eval
 
@@ -149,7 +152,8 @@ if I can't do simple search better then fandom then I should offer something mor
     - [ ] hold out synth validation split, of size 2000; eval base vs fine-tuned on that split
     - [x] check 6 queries that got worse on recall: all vague
     - [x] remvoe bad examples from test ds
-  - [ ] paired bootstrap + CI on hand-labeled ds for retriever + reranker
+- [x] create pipeline paired bootstrap + CI on hand-labeled ds for retriever
+- [ ] create pipeline paired bootstrap + CI on hand-labeled ds for retriever + reranker
 
 #### frontend
 
