@@ -136,7 +136,7 @@ if I can't do simple search better then fandom then I should offer something mor
   - no vague: recall@10 0.926 -> 0.947; 95% CI = [-0.0211, 0.0632]; ndcg@10 0.868 -> 0.864 95% CI = [-0.0385, 0.0304]
   - vague: recall@10 0.868 -> 0.894 95% CI = [0.0000, 0.0579]; ndcg@10 0.766 -> 0.763 95% CI = [-0.0285, 0.0236]
 - [x] train reranker on arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
--
+  - ndcg@10 0.966492 -> 0.984715
 
 #### eval
 
