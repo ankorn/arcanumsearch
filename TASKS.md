@@ -131,11 +131,12 @@ if I can't do simple search better then fandom then I should offer something mor
   - intial recall@10 0.992958; ndcg@10 0.929923
 - [x] 60% vague: train retriever on arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
   - intial recall@10 0.961887; ndcg@10 0.868659
-- [x] 80% vague: train retriever on arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
+- [ ] 80% vague: train retriever on arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
   - intial recall@10 0.979094; ndcg@10 0.890320
   - no vague: recall@10 0.926 -> 0.947; 95% CI = [-0.0211, 0.0632]; ndcg@10 0.868 -> 0.864 95% CI = [-0.0385, 0.0304]
   - vague: recall@10 0.868 -> 0.894 95% CI = [0.0000, 0.0579]; ndcg@10 0.766 -> 0.763 95% CI = [-0.0285, 0.0236]
-- [ ] train reranker on arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
+- [x] train reranker on arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
+-
 
 #### eval
 
