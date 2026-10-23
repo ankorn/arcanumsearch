@@ -137,6 +137,8 @@ if I can't do simple search better then fandom then I should offer something mor
   - vague: recall@10 0.868 -> 0.894 95% CI = [0.0000, 0.0579]; ndcg@10 0.766 -> 0.763 95% CI = [-0.0285, 0.0236]
 - [x] train reranker on arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
   - ndcg@10 0.966492 -> 0.984715
+  - retrieve 10: recall@10 95% CI = [0.0105, 0.1053]; ndcg@10: 95% CI = [-0.0100, 0.0814]
+  - retrieve 20: recall@10 95% CI = [0.0105, 0.2000]; ndcg@10: 95% CI = [-0.0135, 0.0848]
 
 #### eval
 
@@ -154,7 +156,8 @@ if I can't do simple search better then fandom then I should offer something mor
     - [x] check 6 queries that got worse on recall: all vague
     - [x] remvoe bad examples from test ds
 - [x] create pipeline paired bootstrap + CI on hand-labeled ds for retriever
-- [ ] create pipeline paired bootstrap + CI on hand-labeled ds for retriever + reranker
+- [x] create pipeline paired bootstrap + CI on hand-labeled ds for retriever + reranker
+  - [ ] (bug) inconsistent numbers
 
 #### frontend
 
