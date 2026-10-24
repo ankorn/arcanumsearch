@@ -8,6 +8,13 @@ async function getEmbedding(query: string) {
   return result.data as number[];
 }
 
+// pairs: [[query, document], ...]
+async function getRerankerIndices(pairs: Array<Array<string>>) {
+  const app = await client("pameydorke/arcanumchat-reranker");
+  const result = await app.predict("/predict", pairs);
+  return result.data as number[];
+}
+
 export default {
   fetch: withSupabase({ auth: ["publishable", "secret"] }, async (req, ctx) => {
     const { query } = await req.json();
@@ -31,6 +38,7 @@ export default {
       return Response.json({ error }, { status: 500 });
     }
 
+    // TODO: typing failes
     // @ts-expect-error
     const { data, error } = await ctx.supabase.rpc("knn", {
       query_embedding: embeddings?.[0],
@@ -42,7 +50,37 @@ export default {
       return Response.json({ error: error?.message }, { status: 500 });
     }
 
-    return Response.json({ results: data });
+    const docs = data as {
+      content: string;
+      id: number;
+      similarity: number;
+      title: string;
+      url: string;
+    }[];
+
+    const pairs = docs?.map((item) => [query, item?.content]);
+
+    let indices: number[] | undefined;
+    try {
+      indices = await getRerankerIndices(pairs);
+    } catch (error) {
+      console.error("Failed to get reranker indices:", error);
+
+      if (typeof error === "string" && error.includes("No GPU was available")) {
+        return Response.json({ error }, { status: 503 });
+      }
+
+      return Response.json({ error }, { status: 500 });
+    }
+
+    const rerankedDocs = indices?.slice(0, 5)?.map((i) => {
+      return {
+        ...docs?.[i],
+        similarity: undefined,
+      };
+    });
+
+    return Response.json({ results: rerankedDocs });
   }),
 };
 
