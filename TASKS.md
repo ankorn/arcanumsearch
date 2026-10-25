@@ -199,7 +199,7 @@ if I can't do simple search better then fandom then I should offer something mor
 - [x] deploy pameydorke/arcanumchat-reranker-bge-reranker-v2-m3
 - [x] update supabase embeddings
   - [x] use initial ds for full docs
-- [ ] use acranumchat retriever + reranker in supabase knn function
+- [x] use acranumchat retriever + reranker in supabase knn function
 
 #### chat
 
@@ -209,3 +209,4 @@ if I can't do simple search better then fandom then I should offer something mor
 
 - [ ] check if I can legally store reddit data with authors
 - [x] make reddit post in r/arcanum
+
