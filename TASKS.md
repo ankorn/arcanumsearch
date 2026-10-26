@@ -141,6 +141,8 @@ if I can't do simple search better then fandom then I should offer something mor
   - retrieve 20: recall@10 95% CI = [0.0211, 0.1000]; ndcg@10: 95% CI = [0.0484, 0.1175]
 - [x] remove leakage
 - [ ] retrain without leakage
+  - [ ] retriever
+  - [ ] rernaker 
 
 
 #### eval
