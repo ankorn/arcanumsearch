@@ -137,12 +137,16 @@ if I can't do simple search better then fandom then I should offer something mor
   - vague: recall@10 0.868 -> 0.894 95% CI = [0.0000, 0.0579]; ndcg@10 0.766 -> 0.763 95% CI = [-0.0285, 0.0236]
 - [x] train reranker on arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8
   - ndcg@10 0.966492 -> 0.984715
+  [x] eval retriever + reranker
   - retrieve 10: recall@10 95% CI = [0.0105, 0.1053]; ndcg@10: 95% CI = [0.0248, 0.1117]
   - retrieve 20: recall@10 95% CI = [0.0211, 0.1000]; ndcg@10: 95% CI = [0.0484, 0.1175]
 - [x] remove leakage
-- [ ] retrain without leakage
-  - [ ] retriever
-  - [ ] rernaker 
+- [x] retrain without leakage
+  - [x] train retriever
+  - [x] train reranker 
+  - [x] eval retriever + reranker
+    - retrieve 10: recall@10 95% CI [0.0104, 0.0990]; ndcg@10: 95% CI [0.0225, 0.1001]
+    - retrieve 20: recall@10 0.896 -> 0.958 95% CI [0.0260, 0.0990]; ndcg@10 0.793 -> 0.870 95% CI [0.0406, 0.1170]
 
 
 #### eval
