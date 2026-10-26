@@ -8,6 +8,6 @@ search quests, stats, patches, modes, bugs, formulas, calculators - all in one p
 
 [dataset](https://huggingface.co/datasets/pameydorke/arcanumchat-cross-platform-with-vague-queries-qwen-36-a3b-fp8)
 
-[retriever model widge](https://huggingface.co/spaces/pameydorke/arcanumsearch)
+[retriever model widget](https://huggingface.co/spaces/pameydorke/arcanumsearch)
 
 [reranker model widget](https://huggingface.co/spaces/pameydorke/arcanumchat-reranker)
