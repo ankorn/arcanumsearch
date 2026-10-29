@@ -147,6 +147,8 @@ if I can't do simple search better then fandom then I should offer something mor
   - [x] eval retriever + reranker
     - retrieve 10: recall@10 95% CI [0.0104, 0.0990]; ndcg@10: 95% CI [0.0225, 0.1001]
     - retrieve 20: recall@10 0.896 -> 0.958 95% CI [0.0260, 0.0990]; ndcg@10 0.793 -> 0.870 95% CI [0.0406, 0.1170]
+  - [x] use new models in hf spaces apps
+  - [x] create embs with new retriever, put to db
 
 
 #### eval
