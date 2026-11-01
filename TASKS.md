@@ -170,6 +170,7 @@ if I can't do simple search better then fandom then I should offer something mor
 - [x] create pipeline paired bootstrap + CI on hand-labeled ds for retriever + reranker
   - [x] (bug) inconsistent numbers
 - [x] create eval pipeline for hybrid search
+- [x] create eval pipeline for hybrid search using bm25s and PyStemmer
 
 #### frontend
 
