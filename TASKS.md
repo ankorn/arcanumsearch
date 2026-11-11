@@ -214,6 +214,7 @@ if I can't do simple search better then fandom then I should offer something mor
 - [x] update supabase embeddings
   - [x] use initial ds for full docs
 - [x] use acranumchat retriever + reranker in supabase knn function
+- [x] fix no hf token issue
 
 #### chat
 

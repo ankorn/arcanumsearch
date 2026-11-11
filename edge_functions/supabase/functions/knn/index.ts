@@ -35,6 +35,7 @@ async function getEmbedding(query: string): Promise<number[]> {
   const app = await Client.connect(EMBEDDING_MODEL, {
     token: HF_TOKEN,
   });
+
   const result = await app.predict("/embed_query", [query]);
 
   let out = unwrapSingleOutput<unknown>(result.data);
