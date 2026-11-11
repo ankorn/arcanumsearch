@@ -1,6 +1,6 @@
 import "@supabase/functions-js/edge-runtime.d.ts";
 import { withSupabase } from "@supabase/server";
-import { client } from "@gradio/client";
+import { Client } from "@gradio/client";
 
 const EMBEDDING_MODEL = "pameydorke/arcanumsearch";
 const RERANKER_MODEL = "pameydorke/arcanumchat-reranker";
@@ -27,7 +27,14 @@ function unwrapSingleOutput<T>(data: unknown): T {
 }
 
 async function getEmbedding(query: string): Promise<number[]> {
-  const app = await client(EMBEDDING_MODEL);
+  const HF_TOKEN = Deno.env.get("HF_TOKEN") as `hf_${string}`;
+  if (!HF_TOKEN) {
+    throw new Error("Embedding request failed: no HF token");
+  }
+
+  const app = await Client.connect(EMBEDDING_MODEL, {
+    token: HF_TOKEN,
+  });
   const result = await app.predict("/embed_query", [query]);
 
   let out = unwrapSingleOutput<unknown>(result.data);
@@ -52,7 +59,14 @@ async function getRerankerIndices(
 ): Promise<number[]> {
   if (pairs.length === 0) return [];
 
-  const app = await client(RERANKER_MODEL);
+  const HF_TOKEN = Deno.env.get("HF_TOKEN") as `hf_${string}`;
+  if (!HF_TOKEN) {
+    throw new Error("Reranker request failed: no HF token");
+  }
+
+  const app = await Client.connect(RERANKER_MODEL, {
+    token: HF_TOKEN,
+  });
 
   const result = await app.predict("/predict", [JSON.stringify(pairs)]);
 
